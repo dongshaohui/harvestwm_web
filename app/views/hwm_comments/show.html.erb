@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hwm viewpoint:</b>
+  <%= @hwm_comment.hwm_viewpoint_id %>
+</p>
+
+<p>
+  <b>Hwm user account:</b>
+  <%= @hwm_comment.hwm_user_account_id %>
+</p>
+
+<p>
+  <b>Comment content:</b>
+  <%= @hwm_comment.comment_content %>
+</p>
+
+
+<%= link_to 'Edit', edit_hwm_comment_path(@hwm_comment) %> |
+<%= link_to 'Back', hwm_comments_path %>

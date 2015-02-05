@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  source_type: 1
+  addr: MyString
+
+two:
+  source_type: 1
+  addr: MyString

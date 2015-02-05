@@ -1,0 +1,53 @@
+<%= form_for(@hwm_management_organization) do |f| %>
+  <% if @hwm_management_organization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_management_organization.errors.count, "error") %> prohibited this hwm_management_organization from being saved:</h2>
+
+      <ul>
+      <% @hwm_management_organization.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cnname %><br />
+    <%= f.text_field :cnname %>
+  </div>
+  <div class="field">
+    <%= f.label :enname %><br />
+    <%= f.text_field :enname %>
+  </div>
+  <div class="field">
+    <%= f.label :short_name %><br />
+    <%= f.text_field :short_name %>
+  </div>
+  <div class="field">
+    <%= f.label :capital %><br />
+    <%= f.text_field :capital %>
+  </div>
+  <div class="field">
+    <%= f.label :legal_repr %><br />
+    <%= f.text_field :legal_repr %>
+  </div>
+  <div class="field">
+    <%= f.label :nature %><br />
+    <%= f.text_field :nature %>
+  </div>
+  <div class="field">
+    <%= f.label :found_date %><br />
+    <%= f.date_select :found_date %>
+  </div>
+  <div class="field">
+    <%= f.label :invest_field %><br />
+    <%= f.text_field :invest_field %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br />
+    <%= f.text_area :desc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

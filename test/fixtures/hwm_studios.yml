@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_user_account_id: 1
+  auth_type: 1
+  tag: 1
+  industry: MyString
+  nature: MyString
+  studioname: MyString
+  studio_intro: MyString
+  studio_desc: MyText
+  country: MyString
+  province: MyString
+  city: MyString
+  district: MyString
+  address: MyText
+  tel: MyString
+  email: MyString
+  fax: MyString
+  corp_repr: MyString
+  share_holder: MyString
+  employee_number: 1
+  reg_no: MyString
+  reg_addr: MyString
+  establish_date: 2015-01-12
+  due_date: 2015-01-12
+  organize_code: MyString
+  tax_reg_cert: MyString
+  verify_state: 1
+  verify_reason: MyText
+
+two:
+  hwm_user_account_id: 1
+  auth_type: 1
+  tag: 1
+  industry: MyString
+  nature: MyString
+  studioname: MyString
+  studio_intro: MyString
+  studio_desc: MyText
+  country: MyString
+  province: MyString
+  city: MyString
+  district: MyString
+  address: MyText
+  tel: MyString
+  email: MyString
+  fax: MyString
+  corp_repr: MyString
+  share_holder: MyString
+  employee_number: 1
+  reg_no: MyString
+  reg_addr: MyString
+  establish_date: 2015-01-12
+  due_date: 2015-01-12
+  organize_code: MyString
+  tax_reg_cert: MyString
+  verify_state: 1
+  verify_reason: MyText

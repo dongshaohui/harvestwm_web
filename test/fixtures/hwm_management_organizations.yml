@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cnname: MyString
+  enname: MyString
+  short_name: MyString
+  capital: MyString
+  legal_repr: MyString
+  nature: MyString
+  found_date: 2015-01-12
+  invest_field: MyString
+  desc: MyText
+
+two:
+  cnname: MyString
+  enname: MyString
+  short_name: MyString
+  capital: MyString
+  legal_repr: MyString
+  nature: MyString
+  found_date: 2015-01-12
+  invest_field: MyString
+  desc: MyText

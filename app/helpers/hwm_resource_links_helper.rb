@@ -1,0 +1,2 @@
+module HwmResourceLinksHelper
+end

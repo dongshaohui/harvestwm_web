@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  product_type_id: 1
+  fund_type_id: 1
+  product_name: MyString
+  start_date: 2015-01-12
+  end_date: 2015-01-12
+  due_time: MyString
+  risk_level: 1
+  risk_control: MyString
+  state: 1
+  establish_date: 2015-01-12
+  manage_fee: MyString
+  custody_fee: MyString
+  subscribe_fee: MyString
+  redeem_fee: MyString
+  custody_bank: MyString
+  expect_profit: MyString
+  profit_desc: MyText
+  raise_size: MyString
+  init_capital: MyString
+  recommend_reason: MyText
+  investment: MyString
+  repay_source: MyString
+  financer: MyString
+  financer_desc: MyText
+
+two:
+  product_type_id: 1
+  fund_type_id: 1
+  product_name: MyString
+  start_date: 2015-01-12
+  end_date: 2015-01-12
+  due_time: MyString
+  risk_level: 1
+  risk_control: MyString
+  state: 1
+  establish_date: 2015-01-12
+  manage_fee: MyString
+  custody_fee: MyString
+  subscribe_fee: MyString
+  redeem_fee: MyString
+  custody_bank: MyString
+  expect_profit: MyString
+  profit_desc: MyText
+  raise_size: MyString
+  init_capital: MyString
+  recommend_reason: MyText
+  investment: MyString
+  repay_source: MyString
+  financer: MyString
+  financer_desc: MyText

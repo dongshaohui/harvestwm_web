@@ -1,0 +1,25 @@
+<h1>Listing hwm_label_types</h1>
+
+<table>
+  <tr>
+    <th>Label type content</th>
+    <th>Label type desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_label_types.each do |hwm_label_type| %>
+  <tr>
+    <td><%= hwm_label_type.label_type_content %></td>
+    <td><%= hwm_label_type.label_type_desc %></td>
+    <td><%= link_to 'Show', hwm_label_type %></td>
+    <td><%= link_to 'Edit', edit_hwm_label_type_path(hwm_label_type) %></td>
+    <td><%= link_to 'Destroy', hwm_label_type, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm label type', new_hwm_label_type_path %>

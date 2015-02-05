@@ -1,0 +1,33 @@
+<%= form_for(@hwm_viewpoint) do |f| %>
+  <% if @hwm_viewpoint.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_viewpoint.errors.count, "error") %> prohibited this hwm_viewpoint from being saved:</h2>
+
+      <ul>
+      <% @hwm_viewpoint.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hwm_user_account_id %><br />
+    <%= f.number_field :hwm_user_account_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_area :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :viewtimes %><br />
+    <%= f.number_field :viewtimes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

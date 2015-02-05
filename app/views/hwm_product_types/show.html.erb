@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @hwm_product_type.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @hwm_product_type.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_hwm_product_type_path(@hwm_product_type) %> |
+<%= link_to 'Back', hwm_product_types_path %>

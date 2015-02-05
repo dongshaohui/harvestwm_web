@@ -1,0 +1,27 @@
+<h1>Listing hwm_comments</h1>
+
+<table>
+  <tr>
+    <th>Hwm viewpoint</th>
+    <th>Hwm user account</th>
+    <th>Comment content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_comments.each do |hwm_comment| %>
+  <tr>
+    <td><%= hwm_comment.hwm_viewpoint_id %></td>
+    <td><%= hwm_comment.hwm_user_account_id %></td>
+    <td><%= hwm_comment.comment_content %></td>
+    <td><%= link_to 'Show', hwm_comment %></td>
+    <td><%= link_to 'Edit', edit_hwm_comment_path(hwm_comment) %></td>
+    <td><%= link_to 'Destroy', hwm_comment, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm comment', new_hwm_comment_path %>

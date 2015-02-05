@@ -1,0 +1,33 @@
+<h1>Listing hwm_fund_values</h1>
+
+<table>
+  <tr>
+    <th>Hwm product</th>
+    <th>Fundcode</th>
+    <th>Unit value</th>
+    <th>Accu value</th>
+    <th>Day change</th>
+    <th>Trade date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_fund_values.each do |hwm_fund_value| %>
+  <tr>
+    <td><%= hwm_fund_value.hwm_product_id %></td>
+    <td><%= hwm_fund_value.fundcode %></td>
+    <td><%= hwm_fund_value.unit_value %></td>
+    <td><%= hwm_fund_value.accu_value %></td>
+    <td><%= hwm_fund_value.day_change %></td>
+    <td><%= hwm_fund_value.trade_date %></td>
+    <td><%= link_to 'Show', hwm_fund_value %></td>
+    <td><%= link_to 'Edit', edit_hwm_fund_value_path(hwm_fund_value) %></td>
+    <td><%= link_to 'Destroy', hwm_fund_value, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm fund value', new_hwm_fund_value_path %>

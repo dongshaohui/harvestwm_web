@@ -1,0 +1,29 @@
+<%= form_for(@hwm_resource_link) do |f| %>
+  <% if @hwm_resource_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_resource_link.errors.count, "error") %> prohibited this hwm_resource_link from being saved:</h2>
+
+      <ul>
+      <% @hwm_resource_link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :link_type %><br />
+    <%= f.number_field :link_type %>
+  </div>
+  <div class="field">
+    <%= f.label :source_type %><br />
+    <%= f.number_field :source_type %>
+  </div>
+  <div class="field">
+    <%= f.label :addr %><br />
+    <%= f.text_field :addr %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,45 @@
+<%= form_for(@hwm_fund_manager) do |f| %>
+  <% if @hwm_fund_manager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_fund_manager.errors.count, "error") %> prohibited this hwm_fund_manager from being saved:</h2>
+
+      <ul>
+      <% @hwm_fund_manager.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :intro %><br />
+    <%= f.text_area :intro %>
+  </div>
+  <div class="field">
+    <%= f.label :work_period %><br />
+    <%= f.text_field :work_period %>
+  </div>
+  <div class="field">
+    <%= f.label :expert_fund_type %><br />
+    <%= f.text_field :expert_fund_type %>
+  </div>
+  <div class="field">
+    <%= f.label :yearly_return %><br />
+    <%= f.text_field :yearly_return %>
+  </div>
+  <div class="field">
+    <%= f.label :max_profit %><br />
+    <%= f.text_field :max_profit %>
+  </div>
+  <div class="field">
+    <%= f.label :max_retrace %><br />
+    <%= f.text_field :max_retrace %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

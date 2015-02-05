@@ -1,0 +1,75 @@
+<h1>Listing hwm_studios</h1>
+
+<table>
+  <tr>
+    <th>Hwm user account</th>
+    <th>Auth type</th>
+    <th>Tag</th>
+    <th>Industry</th>
+    <th>Nature</th>
+    <th>Studioname</th>
+    <th>Studio intro</th>
+    <th>Studio desc</th>
+    <th>Country</th>
+    <th>Province</th>
+    <th>City</th>
+    <th>District</th>
+    <th>Address</th>
+    <th>Tel</th>
+    <th>Email</th>
+    <th>Fax</th>
+    <th>Corp repr</th>
+    <th>Share holder</th>
+    <th>Employee number</th>
+    <th>Reg no</th>
+    <th>Reg addr</th>
+    <th>Establish date</th>
+    <th>Due date</th>
+    <th>Organize code</th>
+    <th>Tax reg cert</th>
+    <th>Verify state</th>
+    <th>Verify reason</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_studios.each do |hwm_studio| %>
+  <tr>
+    <td><%= hwm_studio.hwm_user_account_id %></td>
+    <td><%= hwm_studio.auth_type %></td>
+    <td><%= hwm_studio.tag %></td>
+    <td><%= hwm_studio.industry %></td>
+    <td><%= hwm_studio.nature %></td>
+    <td><%= hwm_studio.studioname %></td>
+    <td><%= hwm_studio.studio_intro %></td>
+    <td><%= hwm_studio.studio_desc %></td>
+    <td><%= hwm_studio.country %></td>
+    <td><%= hwm_studio.province %></td>
+    <td><%= hwm_studio.city %></td>
+    <td><%= hwm_studio.district %></td>
+    <td><%= hwm_studio.address %></td>
+    <td><%= hwm_studio.tel %></td>
+    <td><%= hwm_studio.email %></td>
+    <td><%= hwm_studio.fax %></td>
+    <td><%= hwm_studio.corp_repr %></td>
+    <td><%= hwm_studio.share_holder %></td>
+    <td><%= hwm_studio.employee_number %></td>
+    <td><%= hwm_studio.reg_no %></td>
+    <td><%= hwm_studio.reg_addr %></td>
+    <td><%= hwm_studio.establish_date %></td>
+    <td><%= hwm_studio.due_date %></td>
+    <td><%= hwm_studio.organize_code %></td>
+    <td><%= hwm_studio.tax_reg_cert %></td>
+    <td><%= hwm_studio.verify_state %></td>
+    <td><%= hwm_studio.verify_reason %></td>
+    <td><%= link_to 'Show', hwm_studio %></td>
+    <td><%= link_to 'Edit', edit_hwm_studio_path(hwm_studio) %></td>
+    <td><%= link_to 'Destroy', hwm_studio, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm studio', new_hwm_studio_path %>

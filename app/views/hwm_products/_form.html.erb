@@ -1,0 +1,113 @@
+<%= form_for(@hwm_product) do |f| %>
+  <% if @hwm_product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_product.errors.count, "error") %> prohibited this hwm_product from being saved:</h2>
+
+      <ul>
+      <% @hwm_product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product_type_id %><br />
+    <%= f.number_field :product_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fund_type_id %><br />
+    <%= f.number_field :fund_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :product_name %><br />
+    <%= f.text_field :product_name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br />
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :due_time %><br />
+    <%= f.text_field :due_time %>
+  </div>
+  <div class="field">
+    <%= f.label :risk_level %><br />
+    <%= f.number_field :risk_level %>
+  </div>
+  <div class="field">
+    <%= f.label :risk_control %><br />
+    <%= f.text_field :risk_control %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.number_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :establish_date %><br />
+    <%= f.date_select :establish_date %>
+  </div>
+  <div class="field">
+    <%= f.label :manage_fee %><br />
+    <%= f.text_field :manage_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :custody_fee %><br />
+    <%= f.text_field :custody_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :subscribe_fee %><br />
+    <%= f.text_field :subscribe_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :redeem_fee %><br />
+    <%= f.text_field :redeem_fee %>
+  </div>
+  <div class="field">
+    <%= f.label :custody_bank %><br />
+    <%= f.text_field :custody_bank %>
+  </div>
+  <div class="field">
+    <%= f.label :expect_profit %><br />
+    <%= f.text_field :expect_profit %>
+  </div>
+  <div class="field">
+    <%= f.label :profit_desc %><br />
+    <%= f.text_area :profit_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :raise_size %><br />
+    <%= f.text_field :raise_size %>
+  </div>
+  <div class="field">
+    <%= f.label :init_capital %><br />
+    <%= f.text_field :init_capital %>
+  </div>
+  <div class="field">
+    <%= f.label :recommend_reason %><br />
+    <%= f.text_area :recommend_reason %>
+  </div>
+  <div class="field">
+    <%= f.label :investment %><br />
+    <%= f.text_field :investment %>
+  </div>
+  <div class="field">
+    <%= f.label :repay_source %><br />
+    <%= f.text_field :repay_source %>
+  </div>
+  <div class="field">
+    <%= f.label :financer %><br />
+    <%= f.text_field :financer %>
+  </div>
+  <div class="field">
+    <%= f.label :financer_desc %><br />
+    <%= f.text_area :financer_desc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

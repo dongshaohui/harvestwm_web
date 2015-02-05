@@ -1,0 +1,2 @@
+module HwmCommentsHelper
+end

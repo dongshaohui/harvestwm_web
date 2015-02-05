@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  intro: MyText
+  work_period: MyString
+  expert_fund_type: MyString
+  yearly_return: MyString
+  max_profit: MyString
+  max_retrace: MyString
+
+two:
+  name: MyString
+  intro: MyText
+  work_period: MyString
+  expert_fund_type: MyString
+  yearly_return: MyString
+  max_profit: MyString
+  max_retrace: MyString

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_label_type_id: 1
+  hwm_label_id: 1
+
+two:
+  hwm_label_type_id: 1
+  hwm_label_id: 1

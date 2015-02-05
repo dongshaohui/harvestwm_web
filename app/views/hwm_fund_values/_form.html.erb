@@ -1,0 +1,41 @@
+<%= form_for(@hwm_fund_value) do |f| %>
+  <% if @hwm_fund_value.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_fund_value.errors.count, "error") %> prohibited this hwm_fund_value from being saved:</h2>
+
+      <ul>
+      <% @hwm_fund_value.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hwm_product_id %><br />
+    <%= f.number_field :hwm_product_id %>
+  </div>
+  <div class="field">
+    <%= f.label :fundcode %><br />
+    <%= f.text_field :fundcode %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_value %><br />
+    <%= f.text_field :unit_value %>
+  </div>
+  <div class="field">
+    <%= f.label :accu_value %><br />
+    <%= f.text_field :accu_value %>
+  </div>
+  <div class="field">
+    <%= f.label :day_change %><br />
+    <%= f.text_field :day_change %>
+  </div>
+  <div class="field">
+    <%= f.label :trade_date %><br />
+    <%= f.date_select :trade_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

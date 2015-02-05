@@ -1,0 +1,97 @@
+<h1>Listing hwm_user_detail_infos</h1>
+
+<table>
+  <tr>
+    <th>Hwm user account</th>
+    <th>Social account</th>
+    <th>Recommender</th>
+    <th>Recommender type</th>
+    <th>Cert valid date</th>
+    <th>Nationality</th>
+    <th>Province</th>
+    <th>City</th>
+    <th>District</th>
+    <th>Address</th>
+    <th>Postcode</th>
+    <th>Tel</th>
+    <th>Fax</th>
+    <th>Interest</th>
+    <th>Sex</th>
+    <th>Marriage</th>
+    <th>Education</th>
+    <th>Workunit</th>
+    <th>Occupation code</th>
+    <th>Income</th>
+    <th>Population</th>
+    <th>Asset</th>
+    <th>Application number</th>
+    <th>Transaction date</th>
+    <th>Transaction time</th>
+    <th>Transaction account</th>
+    <th>Transaction channel</th>
+    <th>Send bill choice</th>
+    <th>Send bill type</th>
+    <th>Sail code</th>
+    <th>Business code</th>
+    <th>Network code</th>
+    <th>Custom risk level</th>
+    <th>Self intro</th>
+    <th>Edu background</th>
+    <th>Certificate</th>
+    <th>Work intro</th>
+    <th>Case intro</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_user_detail_infos.each do |hwm_user_detail_info| %>
+  <tr>
+    <td><%= hwm_user_detail_info.hwm_user_account_id %></td>
+    <td><%= hwm_user_detail_info.social_account %></td>
+    <td><%= hwm_user_detail_info.recommender %></td>
+    <td><%= hwm_user_detail_info.recommender_type %></td>
+    <td><%= hwm_user_detail_info.cert_valid_date %></td>
+    <td><%= hwm_user_detail_info.nationality %></td>
+    <td><%= hwm_user_detail_info.province %></td>
+    <td><%= hwm_user_detail_info.city %></td>
+    <td><%= hwm_user_detail_info.district %></td>
+    <td><%= hwm_user_detail_info.address %></td>
+    <td><%= hwm_user_detail_info.postcode %></td>
+    <td><%= hwm_user_detail_info.tel %></td>
+    <td><%= hwm_user_detail_info.fax %></td>
+    <td><%= hwm_user_detail_info.interest %></td>
+    <td><%= hwm_user_detail_info.sex %></td>
+    <td><%= hwm_user_detail_info.marriage %></td>
+    <td><%= hwm_user_detail_info.education %></td>
+    <td><%= hwm_user_detail_info.workunit %></td>
+    <td><%= hwm_user_detail_info.occupation_code %></td>
+    <td><%= hwm_user_detail_info.income %></td>
+    <td><%= hwm_user_detail_info.population %></td>
+    <td><%= hwm_user_detail_info.asset %></td>
+    <td><%= hwm_user_detail_info.application_number %></td>
+    <td><%= hwm_user_detail_info.transaction_date %></td>
+    <td><%= hwm_user_detail_info.transaction_time %></td>
+    <td><%= hwm_user_detail_info.transaction_account %></td>
+    <td><%= hwm_user_detail_info.transaction_channel %></td>
+    <td><%= hwm_user_detail_info.send_bill_choice %></td>
+    <td><%= hwm_user_detail_info.send_bill_type %></td>
+    <td><%= hwm_user_detail_info.sail_code %></td>
+    <td><%= hwm_user_detail_info.business_code %></td>
+    <td><%= hwm_user_detail_info.network_code %></td>
+    <td><%= hwm_user_detail_info.custom_risk_level %></td>
+    <td><%= hwm_user_detail_info.self_intro %></td>
+    <td><%= hwm_user_detail_info.edu_background %></td>
+    <td><%= hwm_user_detail_info.certificate %></td>
+    <td><%= hwm_user_detail_info.work_intro %></td>
+    <td><%= hwm_user_detail_info.case_intro %></td>
+    <td><%= link_to 'Show', hwm_user_detail_info %></td>
+    <td><%= link_to 'Edit', edit_hwm_user_detail_info_path(hwm_user_detail_info) %></td>
+    <td><%= link_to 'Destroy', hwm_user_detail_info, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm user detail info', new_hwm_user_detail_info_path %>

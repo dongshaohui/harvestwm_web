@@ -1,0 +1,23 @@
+<h1>Listing hwm_labels</h1>
+
+<table>
+  <tr>
+    <th>Label content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_labels.each do |hwm_label| %>
+  <tr>
+    <td><%= hwm_label.label_content %></td>
+    <td><%= link_to 'Show', hwm_label %></td>
+    <td><%= link_to 'Edit', edit_hwm_label_path(hwm_label) %></td>
+    <td><%= link_to 'Destroy', hwm_label, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm label', new_hwm_label_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hwm user account:</b>
+  <%= @hwm_viewpoint.hwm_user_account_id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @hwm_viewpoint.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @hwm_viewpoint.content %>
+</p>
+
+<p>
+  <b>Viewtimes:</b>
+  <%= @hwm_viewpoint.viewtimes %>
+</p>
+
+
+<%= link_to 'Edit', edit_hwm_viewpoint_path(@hwm_viewpoint) %> |
+<%= link_to 'Back', hwm_viewpoints_path %>

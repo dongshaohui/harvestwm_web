@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @hwm_fund_manager.name %>
+</p>
+
+<p>
+  <b>Intro:</b>
+  <%= @hwm_fund_manager.intro %>
+</p>
+
+<p>
+  <b>Work period:</b>
+  <%= @hwm_fund_manager.work_period %>
+</p>
+
+<p>
+  <b>Expert fund type:</b>
+  <%= @hwm_fund_manager.expert_fund_type %>
+</p>
+
+<p>
+  <b>Yearly return:</b>
+  <%= @hwm_fund_manager.yearly_return %>
+</p>
+
+<p>
+  <b>Max profit:</b>
+  <%= @hwm_fund_manager.max_profit %>
+</p>
+
+<p>
+  <b>Max retrace:</b>
+  <%= @hwm_fund_manager.max_retrace %>
+</p>
+
+
+<%= link_to 'Edit', edit_hwm_fund_manager_path(@hwm_fund_manager) %> |
+<%= link_to 'Back', hwm_fund_managers_path %>

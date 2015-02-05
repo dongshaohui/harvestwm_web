@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hwm product:</b>
+  <%= @hwm_fund_value.hwm_product_id %>
+</p>
+
+<p>
+  <b>Fundcode:</b>
+  <%= @hwm_fund_value.fundcode %>
+</p>
+
+<p>
+  <b>Unit value:</b>
+  <%= @hwm_fund_value.unit_value %>
+</p>
+
+<p>
+  <b>Accu value:</b>
+  <%= @hwm_fund_value.accu_value %>
+</p>
+
+<p>
+  <b>Day change:</b>
+  <%= @hwm_fund_value.day_change %>
+</p>
+
+<p>
+  <b>Trade date:</b>
+  <%= @hwm_fund_value.trade_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_hwm_fund_value_path(@hwm_fund_value) %> |
+<%= link_to 'Back', hwm_fund_values_path %>

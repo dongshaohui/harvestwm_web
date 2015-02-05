@@ -1,0 +1,35 @@
+<h1>Listing hwm_fund_managers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Intro</th>
+    <th>Work period</th>
+    <th>Expert fund type</th>
+    <th>Yearly return</th>
+    <th>Max profit</th>
+    <th>Max retrace</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_fund_managers.each do |hwm_fund_manager| %>
+  <tr>
+    <td><%= hwm_fund_manager.name %></td>
+    <td><%= hwm_fund_manager.intro %></td>
+    <td><%= hwm_fund_manager.work_period %></td>
+    <td><%= hwm_fund_manager.expert_fund_type %></td>
+    <td><%= hwm_fund_manager.yearly_return %></td>
+    <td><%= hwm_fund_manager.max_profit %></td>
+    <td><%= hwm_fund_manager.max_retrace %></td>
+    <td><%= link_to 'Show', hwm_fund_manager %></td>
+    <td><%= link_to 'Edit', edit_hwm_fund_manager_path(hwm_fund_manager) %></td>
+    <td><%= link_to 'Destroy', hwm_fund_manager, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm fund manager', new_hwm_fund_manager_path %>

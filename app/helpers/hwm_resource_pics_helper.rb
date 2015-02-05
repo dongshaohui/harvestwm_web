@@ -1,0 +1,2 @@
+module HwmResourcePicsHelper
+end

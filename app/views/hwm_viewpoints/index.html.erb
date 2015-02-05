@@ -1,0 +1,29 @@
+<h1>Listing hwm_viewpoints</h1>
+
+<table>
+  <tr>
+    <th>Hwm user account</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Viewtimes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_viewpoints.each do |hwm_viewpoint| %>
+  <tr>
+    <td><%= hwm_viewpoint.hwm_user_account_id %></td>
+    <td><%= hwm_viewpoint.title %></td>
+    <td><%= hwm_viewpoint.content %></td>
+    <td><%= hwm_viewpoint.viewtimes %></td>
+    <td><%= link_to 'Show', hwm_viewpoint %></td>
+    <td><%= link_to 'Edit', edit_hwm_viewpoint_path(hwm_viewpoint) %></td>
+    <td><%= link_to 'Destroy', hwm_viewpoint, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm viewpoint', new_hwm_viewpoint_path %>

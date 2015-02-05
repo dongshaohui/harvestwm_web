@@ -1,0 +1,125 @@
+<%= form_for(@hwm_studio) do |f| %>
+  <% if @hwm_studio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_studio.errors.count, "error") %> prohibited this hwm_studio from being saved:</h2>
+
+      <ul>
+      <% @hwm_studio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hwm_user_account_id %><br />
+    <%= f.number_field :hwm_user_account_id %>
+  </div>
+  <div class="field">
+    <%= f.label :auth_type %><br />
+    <%= f.number_field :auth_type %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br />
+    <%= f.number_field :tag %>
+  </div>
+  <div class="field">
+    <%= f.label :industry %><br />
+    <%= f.text_field :industry %>
+  </div>
+  <div class="field">
+    <%= f.label :nature %><br />
+    <%= f.text_field :nature %>
+  </div>
+  <div class="field">
+    <%= f.label :studioname %><br />
+    <%= f.text_field :studioname %>
+  </div>
+  <div class="field">
+    <%= f.label :studio_intro %><br />
+    <%= f.text_field :studio_intro %>
+  </div>
+  <div class="field">
+    <%= f.label :studio_desc %><br />
+    <%= f.text_area :studio_desc %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :province %><br />
+    <%= f.text_field :province %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :district %><br />
+    <%= f.text_field :district %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_area :address %>
+  </div>
+  <div class="field">
+    <%= f.label :tel %><br />
+    <%= f.text_field :tel %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :fax %><br />
+    <%= f.text_field :fax %>
+  </div>
+  <div class="field">
+    <%= f.label :corp_repr %><br />
+    <%= f.text_field :corp_repr %>
+  </div>
+  <div class="field">
+    <%= f.label :share_holder %><br />
+    <%= f.text_field :share_holder %>
+  </div>
+  <div class="field">
+    <%= f.label :employee_number %><br />
+    <%= f.number_field :employee_number %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_no %><br />
+    <%= f.text_field :reg_no %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_addr %><br />
+    <%= f.text_field :reg_addr %>
+  </div>
+  <div class="field">
+    <%= f.label :establish_date %><br />
+    <%= f.date_select :establish_date %>
+  </div>
+  <div class="field">
+    <%= f.label :due_date %><br />
+    <%= f.date_select :due_date %>
+  </div>
+  <div class="field">
+    <%= f.label :organize_code %><br />
+    <%= f.text_field :organize_code %>
+  </div>
+  <div class="field">
+    <%= f.label :tax_reg_cert %><br />
+    <%= f.text_field :tax_reg_cert %>
+  </div>
+  <div class="field">
+    <%= f.label :verify_state %><br />
+    <%= f.number_field :verify_state %>
+  </div>
+  <div class="field">
+    <%= f.label :verify_reason %><br />
+    <%= f.text_area :verify_reason %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,81 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_user_account_id: 1
+  social_account: MyString
+  recommender: MyString
+  recommender_type: 1
+  cert_valid_date: 2015-01-12
+  nationality: MyString
+  province: MyString
+  city: MyString
+  district: MyString
+  address: MyString
+  postcode: MyString
+  tel: MyString
+  fax: MyString
+  interest: MyString
+  sex: false
+  marriage: 1
+  education: 1
+  workunit: MyString
+  occupation_code: 1
+  income: 1.5
+  population: 1
+  asset: 1.5
+  application_number: MyString
+  transaction_date: 2015-01-12
+  transaction_time: 2015-01-12 14:28:37
+  transaction_account: MyString
+  transaction_channel: 1
+  send_bill_choice: 1
+  send_bill_type: 1
+  sail_code: MyString
+  business_code: MyString
+  network_code: MyString
+  custom_risk_level: 1
+  self_intro: MyText
+  edu_background: MyText
+  certificate: MyText
+  work_intro: MyText
+  case_intro: MyText
+
+two:
+  hwm_user_account_id: 1
+  social_account: MyString
+  recommender: MyString
+  recommender_type: 1
+  cert_valid_date: 2015-01-12
+  nationality: MyString
+  province: MyString
+  city: MyString
+  district: MyString
+  address: MyString
+  postcode: MyString
+  tel: MyString
+  fax: MyString
+  interest: MyString
+  sex: false
+  marriage: 1
+  education: 1
+  workunit: MyString
+  occupation_code: 1
+  income: 1.5
+  population: 1
+  asset: 1.5
+  application_number: MyString
+  transaction_date: 2015-01-12
+  transaction_time: 2015-01-12 14:28:37
+  transaction_account: MyString
+  transaction_channel: 1
+  send_bill_choice: 1
+  send_bill_type: 1
+  sail_code: MyString
+  business_code: MyString
+  network_code: MyString
+  custom_risk_level: 1
+  self_intro: MyText
+  edu_background: MyText
+  certificate: MyText
+  work_intro: MyText
+  case_intro: MyText

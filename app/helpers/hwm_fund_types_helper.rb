@@ -1,0 +1,2 @@
+module HwmFundTypesHelper
+end

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nickname: MyString
+  realname: MyString
+  certno: MyString
+  certtype: MyString
+  mobile: MyString
+  email: MyString
+  encrypt_pwd: MyString
+  hwm_studio_id: 1
+
+two:
+  nickname: MyString
+  realname: MyString
+  certno: MyString
+  certtype: MyString
+  mobile: MyString
+  email: MyString
+  encrypt_pwd: MyString
+  hwm_studio_id: 1

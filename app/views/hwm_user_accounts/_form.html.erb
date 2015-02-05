@@ -1,0 +1,49 @@
+<%= form_for(@hwm_user_account) do |f| %>
+  <% if @hwm_user_account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_user_account.errors.count, "error") %> prohibited this hwm_user_account from being saved:</h2>
+
+      <ul>
+      <% @hwm_user_account.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nickname %><br />
+    <%= f.text_field :nickname %>
+  </div>
+  <div class="field">
+    <%= f.label :realname %><br />
+    <%= f.text_field :realname %>
+  </div>
+  <div class="field">
+    <%= f.label :certno %><br />
+    <%= f.text_field :certno %>
+  </div>
+  <div class="field">
+    <%= f.label :certtype %><br />
+    <%= f.text_field :certtype %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br />
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :encrypt_pwd %><br />
+    <%= f.text_field :encrypt_pwd %>
+  </div>
+  <div class="field">
+    <%= f.label :hwm_studio_id %><br />
+    <%= f.number_field :hwm_studio_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

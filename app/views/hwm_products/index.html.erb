@@ -1,0 +1,69 @@
+<h1>Listing hwm_products</h1>
+
+<table>
+  <tr>
+    <th>Product type</th>
+    <th>Fund type</th>
+    <th>Product name</th>
+    <th>Start date</th>
+    <th>End date</th>
+    <th>Due time</th>
+    <th>Risk level</th>
+    <th>Risk control</th>
+    <th>State</th>
+    <th>Establish date</th>
+    <th>Manage fee</th>
+    <th>Custody fee</th>
+    <th>Subscribe fee</th>
+    <th>Redeem fee</th>
+    <th>Custody bank</th>
+    <th>Expect profit</th>
+    <th>Profit desc</th>
+    <th>Raise size</th>
+    <th>Init capital</th>
+    <th>Recommend reason</th>
+    <th>Investment</th>
+    <th>Repay source</th>
+    <th>Financer</th>
+    <th>Financer desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_products.each do |hwm_product| %>
+  <tr>
+    <td><%= hwm_product.product_type_id %></td>
+    <td><%= hwm_product.fund_type_id %></td>
+    <td><%= hwm_product.product_name %></td>
+    <td><%= hwm_product.start_date %></td>
+    <td><%= hwm_product.end_date %></td>
+    <td><%= hwm_product.due_time %></td>
+    <td><%= hwm_product.risk_level %></td>
+    <td><%= hwm_product.risk_control %></td>
+    <td><%= hwm_product.state %></td>
+    <td><%= hwm_product.establish_date %></td>
+    <td><%= hwm_product.manage_fee %></td>
+    <td><%= hwm_product.custody_fee %></td>
+    <td><%= hwm_product.subscribe_fee %></td>
+    <td><%= hwm_product.redeem_fee %></td>
+    <td><%= hwm_product.custody_bank %></td>
+    <td><%= hwm_product.expect_profit %></td>
+    <td><%= hwm_product.profit_desc %></td>
+    <td><%= hwm_product.raise_size %></td>
+    <td><%= hwm_product.init_capital %></td>
+    <td><%= hwm_product.recommend_reason %></td>
+    <td><%= hwm_product.investment %></td>
+    <td><%= hwm_product.repay_source %></td>
+    <td><%= hwm_product.financer %></td>
+    <td><%= hwm_product.financer_desc %></td>
+    <td><%= link_to 'Show', hwm_product %></td>
+    <td><%= link_to 'Edit', edit_hwm_product_path(hwm_product) %></td>
+    <td><%= link_to 'Destroy', hwm_product, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm product', new_hwm_product_path %>

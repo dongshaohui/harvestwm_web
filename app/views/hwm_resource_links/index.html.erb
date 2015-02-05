@@ -1,0 +1,27 @@
+<h1>Listing hwm_resource_links</h1>
+
+<table>
+  <tr>
+    <th>Link type</th>
+    <th>Source type</th>
+    <th>Addr</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_resource_links.each do |hwm_resource_link| %>
+  <tr>
+    <td><%= hwm_resource_link.link_type %></td>
+    <td><%= hwm_resource_link.source_type %></td>
+    <td><%= hwm_resource_link.addr %></td>
+    <td><%= link_to 'Show', hwm_resource_link %></td>
+    <td><%= link_to 'Edit', edit_hwm_resource_link_path(hwm_resource_link) %></td>
+    <td><%= link_to 'Destroy', hwm_resource_link, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm resource link', new_hwm_resource_link_path %>

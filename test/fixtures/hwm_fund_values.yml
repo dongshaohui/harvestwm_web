@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_product_id: 1
+  fundcode: MyString
+  unit_value: MyString
+  accu_value: MyString
+  day_change: MyString
+  trade_date: 2015-01-12
+
+two:
+  hwm_product_id: 1
+  fundcode: MyString
+  unit_value: MyString
+  accu_value: MyString
+  day_change: MyString
+  trade_date: 2015-01-12

@@ -1,0 +1,25 @@
+<h1>Listing hwm_fund_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_fund_types.each do |hwm_fund_type| %>
+  <tr>
+    <td><%= hwm_fund_type.name %></td>
+    <td><%= hwm_fund_type.desc %></td>
+    <td><%= link_to 'Show', hwm_fund_type %></td>
+    <td><%= link_to 'Edit', edit_hwm_fund_type_path(hwm_fund_type) %></td>
+    <td><%= link_to 'Destroy', hwm_fund_type, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm fund type', new_hwm_fund_type_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_viewpoint_id: 1
+  hwm_user_account_id: 1
+  comment_content: MyText
+
+two:
+  hwm_viewpoint_id: 1
+  hwm_user_account_id: 1
+  comment_content: MyText

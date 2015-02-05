@@ -1,0 +1,2 @@
+module HwmProductTypesHelper
+end

@@ -1,0 +1,2 @@
+module HwmUserDetailInfosHelper
+end

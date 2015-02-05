@@ -1,0 +1,37 @@
+<h1>Listing hwm_user_accounts</h1>
+
+<table>
+  <tr>
+    <th>Nickname</th>
+    <th>Realname</th>
+    <th>Certno</th>
+    <th>Certtype</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Encrypt pwd</th>
+    <th>Hwm studio</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_user_accounts.each do |hwm_user_account| %>
+  <tr>
+    <td><%= hwm_user_account.nickname %></td>
+    <td><%= hwm_user_account.realname %></td>
+    <td><%= hwm_user_account.certno %></td>
+    <td><%= hwm_user_account.certtype %></td>
+    <td><%= hwm_user_account.mobile %></td>
+    <td><%= hwm_user_account.email %></td>
+    <td><%= hwm_user_account.encrypt_pwd %></td>
+    <td><%= hwm_user_account.hwm_studio_id %></td>
+    <td><%= link_to 'Show', hwm_user_account %></td>
+    <td><%= link_to 'Edit', edit_hwm_user_account_path(hwm_user_account) %></td>
+    <td><%= link_to 'Destroy', hwm_user_account, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm user account', new_hwm_user_account_path %>

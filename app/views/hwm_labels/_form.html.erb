@@ -1,0 +1,21 @@
+<%= form_for(@hwm_label) do |f| %>
+  <% if @hwm_label.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hwm_label.errors.count, "error") %> prohibited this hwm_label from being saved:</h2>
+
+      <ul>
+      <% @hwm_label.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :label_content %><br />
+    <%= f.text_area :label_content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

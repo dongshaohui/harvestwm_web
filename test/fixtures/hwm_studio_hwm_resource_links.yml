@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_studio_id: 1
+  hwm_resource_link_id: 1
+
+two:
+  hwm_studio_id: 1
+  hwm_resource_link_id: 1

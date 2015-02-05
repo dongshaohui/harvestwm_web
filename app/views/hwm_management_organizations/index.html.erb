@@ -1,0 +1,39 @@
+<h1>Listing hwm_management_organizations</h1>
+
+<table>
+  <tr>
+    <th>Cnname</th>
+    <th>Enname</th>
+    <th>Short name</th>
+    <th>Capital</th>
+    <th>Legal repr</th>
+    <th>Nature</th>
+    <th>Found date</th>
+    <th>Invest field</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hwm_management_organizations.each do |hwm_management_organization| %>
+  <tr>
+    <td><%= hwm_management_organization.cnname %></td>
+    <td><%= hwm_management_organization.enname %></td>
+    <td><%= hwm_management_organization.short_name %></td>
+    <td><%= hwm_management_organization.capital %></td>
+    <td><%= hwm_management_organization.legal_repr %></td>
+    <td><%= hwm_management_organization.nature %></td>
+    <td><%= hwm_management_organization.found_date %></td>
+    <td><%= hwm_management_organization.invest_field %></td>
+    <td><%= hwm_management_organization.desc %></td>
+    <td><%= link_to 'Show', hwm_management_organization %></td>
+    <td><%= link_to 'Edit', edit_hwm_management_organization_path(hwm_management_organization) %></td>
+    <td><%= link_to 'Destroy', hwm_management_organization, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hwm management organization', new_hwm_management_organization_path %>
