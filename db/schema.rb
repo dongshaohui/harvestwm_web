@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150205080727) do
+ActiveRecord::Schema.define(:version => 20150205093024) do
 
   create_table "hwm_comments", :force => true do |t|
     t.integer  "hwm_viewpoint_id",    :null => false
@@ -196,6 +196,13 @@ ActiveRecord::Schema.define(:version => 20150205080727) do
   create_table "hwm_user_account_hwm_labels", :force => true do |t|
     t.integer  "hwm_user_account_id"
     t.integer  "hwm_label_id"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  create_table "hwm_user_account_hwm_resource_pics", :force => true do |t|
+    t.integer  "hwm_user_account_id"
+    t.integer  "hwm_resource_pic_id"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end

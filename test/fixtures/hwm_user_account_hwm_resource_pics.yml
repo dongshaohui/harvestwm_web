@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_user_account_id: 1
+  hwm_resource_pic_id: 1
+
+two:
+  hwm_user_account_id: 1
+  hwm_resource_pic_id: 1
