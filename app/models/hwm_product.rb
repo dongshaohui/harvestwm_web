@@ -1,3 +1,4 @@
+# encoding: utf-8
 class HwmProduct < ActiveRecord::Base
   
   ## 产品model数据验证

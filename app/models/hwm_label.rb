@@ -1,3 +1,4 @@
+# encoding: utf-8
 class HwmLabel < ActiveRecord::Base
   #### 标签与观点多对多关系 ####
   has_many :hwm_viewpoint_hwm_labels # 与关联表的对应关系

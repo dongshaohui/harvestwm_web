@@ -1,3 +1,4 @@
+# encoding: utf-8
 # 在产品表中新增产品类别
 class AddProductTypeToHwmProduct < ActiveRecord::Migration
   def change

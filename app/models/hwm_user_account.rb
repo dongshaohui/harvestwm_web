@@ -1,3 +1,4 @@
+# encoding: utf-8
 class HwmUserAccount < ActiveRecord::Base
   
   ## 用户账户与标签建立联系

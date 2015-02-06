@@ -1,3 +1,4 @@
+# encoding: utf-8
 # 观点与标签的关联表
 class HwmViewpointHwmLabel < ActiveRecord::Base
   belongs_to :hwm_viewpoint # 与观点的关系
