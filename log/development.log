@@ -4155,3 +4155,24 @@ Migrating to AddHwmUserAccountRoleIdToUserAccount (20150206060742)
   [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_hwm_user_detail_infos_on_hwm_user_account_id')[0m
   [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_viewpoint_hwm_labels")
   [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_viewpoints")[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: hwm_user_accounts.nickname: INSERT INTO "hwm_user_accounts" ("certno", "certtype", "created_at", "email", "encrypt_pwd", "hwm_studio_id", "hwm_user_account_role_id", "mobile", "nickname", "password", "realname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+SQLite3::ConstraintException: UNIQUE constraint failed: hwm_user_accounts.mobile: INSERT INTO "hwm_user_accounts" ("certno", "certtype", "created_at", "email", "encrypt_pwd", "hwm_studio_id", "hwm_user_account_role_id", "mobile", "nickname", "password", "realname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+SQLite3::ConstraintException: UNIQUE constraint failed: hwm_user_accounts.mobile: INSERT INTO "hwm_user_accounts" ("certno", "certtype", "created_at", "email", "encrypt_pwd", "hwm_studio_id", "hwm_user_account_role_id", "mobile", "nickname", "password", "realname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+SQLite3::ConstraintException: NOT NULL constraint failed: hwm_user_accounts.nickname: INSERT INTO "hwm_user_accounts" ("certno", "certtype", "created_at", "email", "encrypt_pwd", "hwm_studio_id", "hwm_user_account_role_id", "mobile", "nickname", "password", "realname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (7.4ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Column 'nickname' cannot be null: INSERT INTO `hwm_user_accounts` (`certno`, `certtype`, `created_at`, `email`, `encrypt_pwd`, `hwm_studio_id`, `hwm_user_account_role_id`, `mobile`, `nickname`, `password`, `realname`, `updated_at`) VALUES (NULL, NULL, '2015-02-06 06:22:09', NULL, 'sfs', NULL, NULL, '183', NULL, NULL, NULL, '2015-02-06 06:22:09')
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+SQLite3::ConstraintException: UNIQUE constraint failed: hwm_user_accounts.mobile: INSERT INTO "hwm_user_accounts" ("certno", "certtype", "created_at", "email", "encrypt_pwd", "hwm_studio_id", "hwm_user_account_role_id", "mobile", "nickname", "password", "realname", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
