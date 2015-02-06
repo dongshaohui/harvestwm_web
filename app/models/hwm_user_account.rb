@@ -8,4 +8,8 @@ class HwmUserAccount < ActiveRecord::Base
   has_many :hwm_user_account_hwm_resource_pics # 与关联表建立对应关系
   has_many :hwm_resource_pics , :through => :hwm_user_account_hwm_resource_pics # 与图片资源表建立多对多关系
   
+  ## 用户账户与产品建立关联（多对多）
+  has_many :hwm_user_account_hwm_products # 与关联表建立对应关系
+  has_many :hwm_products ,:through => :hwm_user_account_hwm_products # 与产品建立多对多关系
+  
 end
