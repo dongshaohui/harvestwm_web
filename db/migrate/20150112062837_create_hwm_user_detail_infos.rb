@@ -1,3 +1,6 @@
+# encoding: utf-8
+# author :Dong Shaohui
+# description : 建立用户角色详细信息表
 class CreateHwmUserDetailInfos < ActiveRecord::Migration
   def change
     create_table :hwm_user_detail_infos do |t|

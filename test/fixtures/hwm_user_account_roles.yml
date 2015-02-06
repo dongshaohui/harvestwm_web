@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hwm_user_account_type: MyString
+  hwm_user_account_role_desc: MyString
+
+two:
+  hwm_user_account_type: MyString
+  hwm_user_account_role_desc: MyString

@@ -1,4 +1,5 @@
 # encoding: utf-8
+# author :Dong Shaohui
 # 在产品表中新增产品类别
 class AddProductTypeToHwmProduct < ActiveRecord::Migration
   def change

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150206013201) do
+ActiveRecord::Schema.define(:version => 20150206060742) do
 
   create_table "hwm_comments", :force => true do |t|
     t.integer  "hwm_viewpoint_id",    :null => false
@@ -215,18 +215,28 @@ ActiveRecord::Schema.define(:version => 20150206013201) do
     t.datetime "updated_at",          :null => false
   end
 
+  create_table "hwm_user_account_roles", :force => true do |t|
+    t.string   "hwm_user_account_type"
+    t.string   "hwm_user_account_role_desc"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  add_index "hwm_user_account_roles", ["hwm_user_account_type"], :name => "index_hwm_user_account_roles_on_hwm_user_account_type", :unique => true
+
   create_table "hwm_user_accounts", :force => true do |t|
-    t.string   "nickname",      :null => false
+    t.string   "nickname",                 :null => false
     t.string   "realname"
     t.string   "certno"
     t.string   "certtype"
-    t.string   "mobile",        :null => false
+    t.string   "mobile",                   :null => false
     t.string   "email"
-    t.string   "encrypt_pwd",   :null => false
+    t.string   "encrypt_pwd",              :null => false
     t.integer  "hwm_studio_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
     t.string   "password"
+    t.integer  "hwm_user_account_role_id"
   end
 
   add_index "hwm_user_accounts", ["mobile"], :name => "index_hwm_user_accounts_on_mobile", :unique => true
