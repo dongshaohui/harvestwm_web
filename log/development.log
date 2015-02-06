@@ -3691,3 +3691,251 @@ Migrating to CreateHwmUserAccountHwmProducts (20150205101850)
   [1m[36m (1.7ms)[0m  [1mbegin transaction[0m
 SQLite3::ConstraintException: NOT NULL constraint failed: hwm_products.product_type_id: INSERT INTO "hwm_products" ("created_at", "custody_bank", "custody_fee", "due_time", "end_date", "establish_date", "expect_profit", "financer", "financer_desc", "fund_type_id", "init_capital", "investment", "manage_fee", "product_name", "product_type_id", "profit_desc", "raise_size", "recommend_reason", "redeem_fee", "repay_source", "risk_control", "risk_level", "start_date", "state", "subscribe_fee", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 SQLite3::ConstraintException: NOT NULL constraint failed: hwm_products.product_name: INSERT INTO "hwm_products" ("created_at", "custody_bank", "custody_fee", "due_time", "end_date", "establish_date", "expect_profit", "financer", "financer_desc", "fund_type_id", "init_capital", "investment", "manage_fee", "product_name", "product_type_id", "profit_desc", "raise_size", "recommend_reason", "redeem_fee", "repay_source", "risk_control", "risk_level", "start_date", "state", "subscribe_fee", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateHwmUserAccounts (20150112060620)
+Migrating to CreateHwmResourcePics (20150112061458)
+Migrating to CreateHwmResourceLinks (20150112062303)
+Migrating to CreateHwmStudios (20150112062613)
+Migrating to CreateHwmUserDetailInfos (20150112062837)
+Migrating to CreateHwmViewpoints (20150112063154)
+Migrating to CreateHwmComments (20150112063320)
+Migrating to CreateHwmLabels (20150112063652)
+Migrating to CreateHwmLabelTypes (20150112064008)
+Migrating to CreateHwmProducts (20150112064130)
+Migrating to CreateHwmProductTypes (20150112064319)
+Migrating to CreateHwmFundTypes (20150112064510)
+Migrating to CreateHwmFundValues (20150112064612)
+Migrating to CreateHwmManagementOrganizations (20150112064831)
+Migrating to CreateHwmFundManagers (20150112065023)
+Migrating to AddHwmUserAccountPassword (20150113083851)
+Migrating to CreateHwmViewpointHwmLabels (20150205025049)
+Migrating to CreateHwmLabelTypeHwmLabels (20150205052056)
+Migrating to CreateHwmStudioHwmResourceLinks (20150205055121)
+Migrating to CreateHwmStudioHwmResourcePics (20150205071955)
+Migrating to CreateHwmUserAccountHwmLabels (20150205080727)
+Migrating to CreateHwmUserAccountHwmResourcePics (20150205093024)
+Migrating to CreateHwmUserAccountHwmProducts (20150205101850)
+Migrating to AddProductTypeToHwmProduct (20150206013201)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "hwm_products" ADD "hwm_product_type_id" integer NOT NULL
+SQLite3::SQLException: Cannot add a NOT NULL column with default value NULL: ALTER TABLE "hwm_products" ADD "hwm_product_type_id" integer NOT NULL
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateHwmUserAccounts (20150112060620)
+Migrating to CreateHwmResourcePics (20150112061458)
+Migrating to CreateHwmResourceLinks (20150112062303)
+Migrating to CreateHwmStudios (20150112062613)
+Migrating to CreateHwmUserDetailInfos (20150112062837)
+Migrating to CreateHwmViewpoints (20150112063154)
+Migrating to CreateHwmComments (20150112063320)
+Migrating to CreateHwmLabels (20150112063652)
+Migrating to CreateHwmLabelTypes (20150112064008)
+Migrating to CreateHwmProducts (20150112064130)
+Migrating to CreateHwmProductTypes (20150112064319)
+Migrating to CreateHwmFundTypes (20150112064510)
+Migrating to CreateHwmFundValues (20150112064612)
+Migrating to CreateHwmManagementOrganizations (20150112064831)
+Migrating to CreateHwmFundManagers (20150112065023)
+Migrating to AddHwmUserAccountPassword (20150113083851)
+Migrating to CreateHwmViewpointHwmLabels (20150205025049)
+Migrating to CreateHwmLabelTypeHwmLabels (20150205052056)
+Migrating to CreateHwmStudioHwmResourceLinks (20150205055121)
+Migrating to CreateHwmStudioHwmResourcePics (20150205071955)
+Migrating to CreateHwmUserAccountHwmLabels (20150205080727)
+Migrating to CreateHwmUserAccountHwmResourcePics (20150205093024)
+Migrating to CreateHwmUserAccountHwmProducts (20150205101850)
+Migrating to AddProductTypeToHwmProduct (20150206013201)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (8.3ms)[0m  ALTER TABLE "hwm_products" ADD "hwm_product_type_id" integer
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150206013201')[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_comments")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_fund_managers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_fund_types")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_fund_values")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_hwm_fund_values_on_hwm_product_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_label_type_hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_label_types")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_labels_on_label_content')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_management_organizations")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_product_types")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_products")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_resource_links")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_hwm_resource_links_on_addr')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_resource_pics")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_hwm_resource_pics_on_addr')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_studio_hwm_resource_links")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_studio_hwm_resource_pics")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_studios")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_studios_on_studioname')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_hwm_studios_on_hwm_user_account_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_account_hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_user_account_hwm_products")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_account_hwm_resource_pics")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_user_accounts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_user_accounts_on_nickname')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_user_accounts_on_mobile')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_user_detail_infos")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_user_detail_infos_on_hwm_user_account_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_viewpoint_hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_viewpoints")[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+SQLite3::ConstraintException: NOT NULL constraint failed: hwm_product_types.name: INSERT INTO "hwm_product_types" ("created_at", "desc", "name", "updated_at") VALUES (?, ?, ?, ?)
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddProductTypeToHwmProduct (20150206013201)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TEMPORARY TABLE "altered_hwm_products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_type_id" integer NOT NULL, "fund_type_id" integer, "product_name" varchar(255) NOT NULL, "start_date" date, "end_date" date, "due_time" varchar(255), "risk_level" integer, "risk_control" varchar(255), "state" integer, "establish_date" date, "manage_fee" varchar(255), "custody_fee" varchar(255), "subscribe_fee" varchar(255), "redeem_fee" varchar(255), "custody_bank" varchar(255), "expect_profit" varchar(255), "profit_desc" text, "raise_size" varchar(255), "init_capital" varchar(255), "recommend_reason" text, "investment" varchar(255), "repay_source" varchar(255), "financer" varchar(255), "financer_desc" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "hwm_product_type_id" integer) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_products")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "hwm_products"[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "hwm_products"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "hwm_products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_type_id" integer NOT NULL, "fund_type_id" integer, "product_name" varchar(255) NOT NULL, "start_date" date, "end_date" date, "due_time" varchar(255), "risk_level" integer, "risk_control" varchar(255), "state" integer, "establish_date" date, "manage_fee" varchar(255), "custody_fee" varchar(255), "subscribe_fee" varchar(255), "redeem_fee" varchar(255), "custody_bank" varchar(255), "expect_profit" varchar(255), "profit_desc" text, "raise_size" varchar(255), "init_capital" varchar(255), "recommend_reason" text, "investment" varchar(255), "repay_source" varchar(255), "financer" varchar(255), "financer_desc" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("altered_hwm_products")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "altered_hwm_products"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "altered_hwm_products"
+  [1m[36m (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20150206013201'[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_comments")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_fund_managers")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_fund_types")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_fund_values")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_fund_values_on_hwm_product_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_label_type_hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_label_types")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_labels")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_hwm_labels_on_label_content')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_management_organizations")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_product_types")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_products")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_resource_links")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_resource_links_on_addr')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_resource_pics")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_resource_pics_on_addr')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_studio_hwm_resource_links")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_studio_hwm_resource_pics")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_studios")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_studios_on_studioname')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_studios_on_hwm_user_account_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_account_hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_user_account_hwm_products")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_account_hwm_resource_pics")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_user_accounts")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_user_accounts_on_nickname')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_hwm_user_accounts_on_mobile')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_detail_infos")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_user_detail_infos_on_hwm_user_account_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_viewpoint_hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_viewpoints")[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateHwmUserAccounts (20150112060620)
+Migrating to CreateHwmResourcePics (20150112061458)
+Migrating to CreateHwmResourceLinks (20150112062303)
+Migrating to CreateHwmStudios (20150112062613)
+Migrating to CreateHwmUserDetailInfos (20150112062837)
+Migrating to CreateHwmViewpoints (20150112063154)
+Migrating to CreateHwmComments (20150112063320)
+Migrating to CreateHwmLabels (20150112063652)
+Migrating to CreateHwmLabelTypes (20150112064008)
+Migrating to CreateHwmProducts (20150112064130)
+Migrating to CreateHwmProductTypes (20150112064319)
+Migrating to CreateHwmFundTypes (20150112064510)
+Migrating to CreateHwmFundValues (20150112064612)
+Migrating to CreateHwmManagementOrganizations (20150112064831)
+Migrating to CreateHwmFundManagers (20150112065023)
+Migrating to AddHwmUserAccountPassword (20150113083851)
+Migrating to CreateHwmViewpointHwmLabels (20150205025049)
+Migrating to CreateHwmLabelTypeHwmLabels (20150205052056)
+Migrating to CreateHwmStudioHwmResourceLinks (20150205055121)
+Migrating to CreateHwmStudioHwmResourcePics (20150205071955)
+Migrating to CreateHwmUserAccountHwmLabels (20150205080727)
+Migrating to CreateHwmUserAccountHwmResourcePics (20150205093024)
+Migrating to CreateHwmUserAccountHwmProducts (20150205101850)
+Migrating to AddProductTypeToHwmProduct (20150206013201)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "hwm_products" ADD "hwm_product_type_id" integer NOT NULL
+SQLite3::SQLException: Cannot add a NOT NULL column with default value NULL: ALTER TABLE "hwm_products" ADD "hwm_product_type_id" integer NOT NULL
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateHwmUserAccounts (20150112060620)
+Migrating to CreateHwmResourcePics (20150112061458)
+Migrating to CreateHwmResourceLinks (20150112062303)
+Migrating to CreateHwmStudios (20150112062613)
+Migrating to CreateHwmUserDetailInfos (20150112062837)
+Migrating to CreateHwmViewpoints (20150112063154)
+Migrating to CreateHwmComments (20150112063320)
+Migrating to CreateHwmLabels (20150112063652)
+Migrating to CreateHwmLabelTypes (20150112064008)
+Migrating to CreateHwmProducts (20150112064130)
+Migrating to CreateHwmProductTypes (20150112064319)
+Migrating to CreateHwmFundTypes (20150112064510)
+Migrating to CreateHwmFundValues (20150112064612)
+Migrating to CreateHwmManagementOrganizations (20150112064831)
+Migrating to CreateHwmFundManagers (20150112065023)
+Migrating to AddHwmUserAccountPassword (20150113083851)
+Migrating to CreateHwmViewpointHwmLabels (20150205025049)
+Migrating to CreateHwmLabelTypeHwmLabels (20150205052056)
+Migrating to CreateHwmStudioHwmResourceLinks (20150205055121)
+Migrating to CreateHwmStudioHwmResourcePics (20150205071955)
+Migrating to CreateHwmUserAccountHwmLabels (20150205080727)
+Migrating to CreateHwmUserAccountHwmResourcePics (20150205093024)
+Migrating to CreateHwmUserAccountHwmProducts (20150205101850)
+Migrating to AddProductTypeToHwmProduct (20150206013201)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "hwm_products" ADD "hwm_product_type_id" integer
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20150206013201')[0m
+  [1m[35m (8.9ms)[0m  commit transaction
+  [1m[36m (0.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_comments")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_fund_managers")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_fund_types")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_fund_values")
+  [1m[36m (0.2ms)[0m  [1mPRAGMA index_info('index_hwm_fund_values_on_hwm_product_id')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_label_type_hwm_labels")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_label_types")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_labels")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_labels_on_label_content')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_management_organizations")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_product_types")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_products")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_resource_links")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_resource_links_on_addr')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_resource_pics")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_resource_pics_on_addr')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_studio_hwm_resource_links")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_studio_hwm_resource_pics")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_studios")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_studios_on_studioname')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_studios_on_hwm_user_account_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_account_hwm_labels")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_user_account_hwm_products")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_user_account_hwm_resource_pics")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_user_accounts")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_hwm_user_accounts_on_nickname')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_hwm_user_accounts_on_mobile')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_user_detail_infos")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_hwm_user_detail_infos_on_hwm_user_account_id')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_viewpoint_hwm_labels")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("hwm_viewpoints")[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m

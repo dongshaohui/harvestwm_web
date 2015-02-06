@@ -19,7 +19,7 @@ development:
 #  pool: 5
 #  username: cfgw
 #  password: AAaa1234
-#  host: cfgw2015.mysql.rds.aliyuncs.com
+#  host: cfgw2015ww.mysql.rds.aliyuncs.com
 #  database: harvestwm_website
 #  timeout: 5000
 

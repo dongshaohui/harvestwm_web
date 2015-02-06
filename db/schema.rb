@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150205101850) do
+ActiveRecord::Schema.define(:version => 20150206013201) do
 
   create_table "hwm_comments", :force => true do |t|
     t.integer  "hwm_viewpoint_id",    :null => false
@@ -97,9 +97,9 @@ ActiveRecord::Schema.define(:version => 20150205101850) do
   end
 
   create_table "hwm_products", :force => true do |t|
-    t.integer  "product_type_id",  :null => false
+    t.integer  "product_type_id",     :null => false
     t.integer  "fund_type_id"
-    t.string   "product_name",     :null => false
+    t.string   "product_name",        :null => false
     t.date     "start_date"
     t.date     "end_date"
     t.string   "due_time"
@@ -121,8 +121,9 @@ ActiveRecord::Schema.define(:version => 20150205101850) do
     t.string   "repay_source"
     t.string   "financer"
     t.text     "financer_desc"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+    t.integer  "hwm_product_type_id"
   end
 
   create_table "hwm_resource_links", :force => true do |t|
