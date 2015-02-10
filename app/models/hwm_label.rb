@@ -1,5 +1,10 @@
 # encoding: utf-8
+# author :Dong Shaohui
+# description : 标签model层
 class HwmLabel < ActiveRecord::Base
+  
+  
+  
   #### 标签与观点多对多关系 ####
   has_many :hwm_viewpoint_hwm_labels # 与关联表的对应关系
   has_many :hwm_viewpoints , :through => :hwm_viewpoint_hwm_labels # 与观点的多对多关系
