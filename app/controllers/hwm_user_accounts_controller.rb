@@ -2,10 +2,15 @@ class HwmUserAccountsController < ApplicationController
   # GET /hwm_user_accounts
   # GET /hwm_user_accounts.json
   def index
-    @hwm_user_accounts = HwmUserAccount.all
+    ## 获取参数
     @user_type = params[:type].to_i # 0为投资者，1为投资顾问
+    @pagenum = params[:pagenum].to_i # 获取分页数
+    
+    # 提交给view的参数，包含城市列表、标签列表、投顾信息列表
     @citylist = fetch_city_list_of_consultant   # 获取投顾所在城市列表
     @taglist = fetch_tag_list_of_consultant # 获取投顾标签列表
+    @hwm_consultant_info_list = fetch_consultant_detail_info_list @pagenum == 0 ? 1:@pagenum
+    
     # 分别渲染不同视图
     if @user_type == 1  
       respond_to do |format|
@@ -180,4 +185,51 @@ class HwmUserAccountsController < ApplicationController
     end
     return @taglist.uniq
   end
+  
+  # 获取投资顾问详情信息
+  def fetch_consultant_detail_info_list(pagenum)
+    # 分页策略
+    dis_unit = 8
+    page_front = (pagenum - 1) * dis_unit
+    page_end = pagenum * dis_unit - 1  
+    @hwm_consultant_info_list = []
+    # 获取投资顾问列表
+    @hwm_user_accounts = HwmUserAccount.where(["hwm_user_account_role_id > ?",0])[page_front..page_end]
+    
+    if @hwm_user_accounts != nil
+      @hwm_user_accounts.each do |hwm_user_account|
+        advanceinfo = hwm_user_account.hwm_user_detail_info
+        taglist = hwm_user_account.hwm_labels
+        consultant_info_obj = Hwm_consultant_info.new(hwm_user_account,advanceinfo,taglist)
+        @hwm_consultant_info_list << consultant_info_obj
+      end
+    else
+      puts "对象分页超出限制!"
+    end
+    @hwm_consultant_info_list
+  end
+  
+  ## 投资顾问卡片详情
+  class Hwm_consultant_info
+    def initialize(userinfo,advanceinfo,taglist)
+      @userinfo = userinfo
+      @advanceinfo = advanceinfo
+      @taglist = taglist
+    end
+    
+    ## get方法
+    def userinfo
+      @userinfo
+    end
+    
+    def advanceinfo
+      @advanceinfo
+    end
+    
+    def taglist
+      @taglist
+    end
+    
+  end
+  
 end
