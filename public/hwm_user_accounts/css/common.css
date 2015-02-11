@@ -1,0 +1,36 @@
+body, h1, h2, h3, h4, h5, h6, hr, p,  
+dl, dt, dd, ul, ol, li, th, td, div, span, img,  
+button, input,table,tr,td{margin:0;padding:0;}
+
+ul li{list-style: none;}
+body{font-family:arial;background:#ebebeb;}
+img{border:none;}
+.clear{clear:both;}
+a{text-decoration: none;}
+.f_left{float:left;}
+.f_right{float:right;}
+.w_1100{width:1100px;margin:0 auto;background:#fff; }
+.w_1100_center{width:1100px;margin:0 auto;}
+/*顶部登录*/
+#top{height:30px;background:#232428;width:100%;}
+#top_list{text-align: right;background:#232428;}
+#top_list a{color:#fff;font-size: 12px;padding-left:30px;}
+
+/*导航header*/
+#header{height:80px;width:100%;background:#000000;}
+#header_list{position:relative;}
+#header_list .list_left{width:300px;height:100%;position: absolute;left:0;}
+#header_list .list_left .logo_pic{float:left;}
+#header_list .list_left .logo_name{font-size: 18px;float:left;line-height:80px;display:block;font-size:30px;color:#fff;}
+#header_list .list_right{line-height:80px; text-align:right;height:100%;position:absolute;right:0;}
+.list_item{text-align: right;}
+.list_item li{float:left;padding:0px 10px;}
+.list_item li:hover{background: #fff;}
+.list_item li:hover a{color:#000;}
+.list_right a{color:#fff;}
+/*footer内容*/
+#footer{margin-bottom: 56px;}
+#footer .footer_list{margin-top: 35px;width:100%;height:64px;border-bottom:1px solid #ccc;border-top:1px solid #ccc;}
+.m_center{width:1100px;margin:0 auto;text-align: center;line-height:80px;}
+.m_center a{color:#6c6c6c;padding:0px 25px;font-size: 14px;}
+.bottom_title{text-align: center;padding-top: 20px;color:#6c6c6c;font-size: 12px;}

@@ -17,14 +17,18 @@ HarvestwmWeb::Application.routes.draw do
   resources :hwm_resource_pics
   resources :hwm_user_accounts
   
+  
   ######## 一、用户模块 ##########
   # 获取用户验证码
   get "hwm_user_account/:mobile/getvercode" => "hwm_user_accounts#getvercode", :as=>"user_mobile_vercode"
   # 校验用户验证码是否正确
   get "hwm_user_account/:mobile/validatecode/:validatecode" => "hwm_user_accounts#validatecode" ,:as=>"user_mobile_validatecode"
   
+  
   ######## 二、顾问模块 ##########
-
+  
+  # 投资顾问列表页面
+  match "hwm_user_account/consultantlist" => "hwm_user_accounts#consultantlist"
   ######## 三、工作室模块 ##########
   
   ######## 四、我的工作室模块 ##########

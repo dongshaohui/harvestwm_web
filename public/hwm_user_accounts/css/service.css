@@ -1,0 +1,34 @@
+
+
+/* 内容 顾客团队|工作室*/
+#content{font-family: "微软雅黑";color:#6c6c6c;}
+.content_item{padding-top:20px;padding-left: 45px;}
+.content_item p.text_02{padding:8px 0px;position:relative;font-size:20px;border-bottom: 1px solid #ccc;}
+p.text_02 .o_color{position:absolute;bottom:0;height:3px;width:80px;background:#ff8239;display:block;}
+.content_item p.text_02 .team{color:#ff8239;}
+
+.text_03{width:100%;padding:10px;}
+.text_03 p{display:block;float:left;font-size: 14px;}
+.inside_p{padding:15px 0px;}
+.c_title{margin-right:50px;}
+.c_all{padding:0px 7px;background:#ff8239;color:#fff;margin-right:55px;}
+.c_name a{color:#666;}
+.name_search{border:1px solid #ccc;position:relative;margin-right:15px;}
+.s_k input{width:170px;height:30px;border:none;}
+.s_pic{position:absolute;right:0;top:0;width:30px;height:30px;display:block;background: url(../images/icon.jpg) no-repeat;}
+.con_clear{line-height: 30px;}
+
+/*主体内容 照片*/
+.contact_item {padding-top:10px;padding-left: 32px;}
+.contact_item li{float:left;margin-right: 40px;width:229px;margin-bottom: 30px;}
+.contact_item li .person_picture{height:160px;overflow:hidden;}
+.person_name{padding:5px 0px;}
+.person_name .p_name{width:60px;font-family:arial;}
+.person_name .adder_name{font-size:12px;float:right;}
+.person_describe span.de_tit{margin-right:18px;padding:5px 10px;font-size:12px;background:#f2f2f2;display:block;float:left;}
+#title_three{margin-right:0px;}
+
+/*页脚上下翻页*/
+#next_above{margin-top: 40px;padding-top:45px;padding-bottom:30px;width:400px;margin:0 auto;}
+#next_above span{margin-right:30px;font-family:arial;font-size: 12px;}
+#next_above a{color:#666666;}

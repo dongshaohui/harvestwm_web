@@ -1,0 +1,46 @@
+/*关注|预约*/
+#model_001{width:100%;background:#232428;height:100px;}
+#model_001 .m_content{position:relative;}
+.intro_pic{height:100px;width:84px;margin-right:10px;float:left;margin-left:90px;background:url(../images/icon.png) no-repeat 0px 0px;}
+.intro_detail_model001{color:#ccccad;padding-top:20px;}
+.intro_detail h3{margin-bottom:5px;}
+.intro_detail_model001 p{font-size: 12px;margin-bottom: 5px;}
+.div_right{position:absolute;right:0;top:50%;}
+.div_right span{padding:7px 35px;background:#ff8328;color:#fff;margin-left:10px;}
+.div_right a{color:#fff;}
+
+/*图片内容|文字*/
+#model_002 .m_002_l{width:120px;float:left;}
+#model_002 .m_002_l span{display:block;text-align:center;padding:10px 0px;}
+#model_002 .m_002_r{float:left;width:920px;background:#fff;padding:0px 30px 120px 30px;}
+
+#ban_pic{width:910px;overflow: hidden;margin-bottom:20px;}
+#model_002 .m_002_r p.nr_p{font-size: 14px;color:#6b6b6b;margin-bottom: 30px;}
+.color_t{color:#ff8328;margin-bottom: 20px;display:block;}
+/*最近观点*/
+#new_idea{padding-bottom:20px;padding-top:30px;border-bottom: 1px solid #ccc;position:relative;}
+#new_idea h2{color:#ff8328;}
+#new_idea .n_div{position:absolute;bottom:0;width:97px;height:3px;background:#ff8328;}
+
+#new_idea_list{margin-top: 15px;}
+#new_idea_list .new_item{margin-bottom: 40px;}
+.new_fl{width:172px;}
+.new_fr{padding-left:10px;width:734px;}
+.new_fr .ne_title{font-size:20px;color:#333333;position:relative;}
+.new_fr .ne_title .del{position:absolute;right:0;top:0px;color:#ff0000;font-size: 12px;}
+.intro_detail{font-size:14px;color:#6b6b6b; line-height: 22px;height:84px;overflow:hidden;}
+.b_f{display:block;float:left;line-height:35px;color:#cccccc;}
+.b_f .f1{margin-left: 30px;}
+.b_f .f2{margin-left: 25px;}
+.b_f .gray_div{padding:5px 15px;background:#cccccc;color:#fff;}
+i.bm_pic{background:url(../images/icon.png) no-repeat -140px 0px;width:40px;height:33px;display:block;float:left;}
+#next_page{text-align: right;font-size:14px;}
+#next_page a{color:#1a1a1a;}
+
+/*产品推荐*/
+/* #product_name{height:70px;background:#e7e7e7;margin: 15px 0px;} */
+#product_name{padding: 15px 0px;}
+#table_02 td{border:1px solid #e7e7e7;border-right:none;border-bottom: none;}
+#table_02 td a{color:#ff8328;text-decoration: underline;}
+#table_02{font-size: 12px;font-family: "微软雅黑";color:#7a7a7a;}
+#table_01{font-weight:600;color:#7a7a7a;}

@@ -1,10 +1,20 @@
 # encoding: utf-8
 # author :Dong Shaohui
-# description : 建立用户角色表
+# description : 产品model层
 class HwmProduct < ActiveRecord::Base
   
-  ## 产品model数据验证
+  ## 校验层
+  # 产品类别
   validates_presence_of :hwm_product_type_id,  :message => "产品类别不能为空!" # 产品类别不能为空
+  validates_numericality_of :hwm_product_type_id, :message => "产品类别id必须为数字"
+  
+  # 产品名称
+  validates_presence_of :product_name, :message => "产品名称不能为空"
+  validates_length_of :product_name, :in => 1..50, :message => "产品名称字数不在限制范围内"
+  
+  # 基金类型id
+  validates_numericality_of :fund_type_id, :allow_nil => true, :message => "基金类型必须为数字"
+  
   
   ## 产品与用户账户建立关联
   has_many :hwm_user_account_hwm_products # 与关联表建立对应关系

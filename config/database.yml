@@ -11,22 +11,22 @@
 #  timeout: 5000
 
 # 本地测试库配置
-development:
- adapter: sqlite3
- database: db/test.sqlite3
- pool: 5
- timeout: 5000
+# development:
+#  adapter: sqlite3
+#  database: db/test.sqlite3
+#  pool: 5
+#  timeout: 5000
  
 # 测试环境配置
-# development:
-#   adapter: mysql2
-#   encoding: utf8
-#   pool: 5
-#   username: cfgw
-#   password: AAaa1234
-#   host: cfgw2015ww.mysql.rds.aliyuncs.com
-#   database: harvestwm_website
-#   timeout: 5000
+development:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: cfgw
+  password: AAaa1234
+  host: cfgw2015ww.mysql.rds.aliyuncs.com
+  database: harvestwm_website
+  timeout: 5000
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

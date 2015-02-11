@@ -3,11 +3,19 @@ class HwmUserAccountsController < ApplicationController
   # GET /hwm_user_accounts.json
   def index
     @hwm_user_accounts = HwmUserAccount.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @hwm_user_accounts }
+    @user_type = params[:type].to_i # 0为投资者，1为投资顾问
+    @citylist = fetch_city_list_of_consultant   # 获取投顾所在城市列表
+    @taglist = fetch_tag_list_of_consultant # 获取投顾标签列表
+    # 分别渲染不同视图
+    if @user_type == 1  
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @hwm_user_accounts }
+      end
+    else
+      render "investor"
     end
+
   end
 
   # GET /hwm_user_accounts/1
@@ -141,6 +149,35 @@ class HwmUserAccountsController < ApplicationController
     @user_account_session_time_left = (session[:hwm_user_account_time] - Time.now).to_i
     return @user_account_session_time_left
   end  
+    
+  # 获取投顾列表
+  def consultantlist
+    # 列表页面返回所在城市列表、擅长领域列表、投资顾问列表以及对应的标签列表
+      @hwm_user_accounts = HwmUserAccount.all
+  end
   
   
+  private 
+  # 获取所有投顾的所在城市列表
+  def fetch_city_list_of_consultant
+      @hwm_user_accounts = HwmUserAccount.where(["hwm_user_account_role_id > 0",0])
+      @citylist = []
+      @hwm_user_accounts.each do |hwm_user_account|
+        @citylist << hwm_user_account.hwm_user_detail_info.city
+      end
+      return @citylist.uniq # 城市地名去重
+  end
+  
+  # 获取所有投顾标签列表
+  def fetch_tag_list_of_consultant
+    @hwm_user_accounts = HwmUserAccount.where(["hwm_user_account_role_id > 0",0])
+    @taglist = []
+    @hwm_user_accounts.each do |hwm_user_account|
+      @tags = hwm_user_account.hwm_labels
+      @tags.each do |tag|
+        @taglist << tag.label_content
+      end
+    end
+    return @taglist.uniq
+  end
 end

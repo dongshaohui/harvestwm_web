@@ -24,7 +24,8 @@ class HwmUserAccount < ActiveRecord::Base
   validates_length_of :password, :in => 6..30 , :message => "密码长度限制为6-30个字符"
   
   # 校验角色id
-  validates_numericality_of :hwm_user_account_role_id, :message => "角色id必须为一个数字", :allow_nil => true
+  validates_presence_of :hwm_user_account_role_id, :message => "角色id必须存在"
+  validates_numericality_of :hwm_user_account_role_id, :message => "角色id必须为一个数字"
   # validates_length_of :hwm_user_account_role_id, :in => 1..10, :message => "用户校验角色id数字长度不合法!"
   
   
@@ -48,5 +49,7 @@ class HwmUserAccount < ActiveRecord::Base
   
   ## 与用户详细信息关联
   has_one :hwm_user_detail_info
+
+
   
 end
