@@ -2,11 +2,12 @@
 # author :Dong Shaohui
 # description : 标签model层
 class HwmLabel < ActiveRecord::Base
-  
   ## 校验层
   # 标签名称（内容）
   validates_presence_of :label_content, :message => "标签内容不能为空"
   validates_length_of :label_content, :in => 1..100, :message => "标签长度不符合字数限制" 
+  
+  
   
   
   #### 标签与观点多对多关系 ####

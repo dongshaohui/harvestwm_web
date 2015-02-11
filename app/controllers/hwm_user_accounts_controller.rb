@@ -1,3 +1,5 @@
+# encoding: utf-8
+# description : 用户账户Controller
 class HwmUserAccountsController < ApplicationController
   # GET /hwm_user_accounts
   # GET /hwm_user_accounts.json
@@ -8,6 +10,8 @@ class HwmUserAccountsController < ApplicationController
     @addr = params[:addr].to_s # 获取城市
     @tag = params[:tag].to_s # 标签
     @name = params[:name].to_s # 顾客姓名
+    
+    
     # 提交给view的参数，包含城市列表、标签列表、投顾信息列表
     @citylist = fetch_city_list_of_consultant   # 获取投顾所在城市列表
     @taglist = fetch_tag_list_of_consultant # 获取投顾标签列表

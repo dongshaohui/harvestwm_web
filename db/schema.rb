@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150206083447) do
+ActiveRecord::Schema.define(:version => 20150211092812) do
 
   create_table "hwm_comments", :force => true do |t|
     t.integer  "hwm_viewpoint_id",    :null => false
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20150206083447) do
   end
 
   create_table "hwm_products", :force => true do |t|
+    t.integer  "product_type_id",     :null => false
     t.integer  "fund_type_id"
     t.string   "product_name",        :null => false
     t.date     "start_date"
@@ -122,7 +123,7 @@ ActiveRecord::Schema.define(:version => 20150206083447) do
     t.text     "financer_desc"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
-    t.integer  "hwm_product_type_id", :null => false
+    t.integer  "hwm_product_type_id"
   end
 
   create_table "hwm_resource_links", :force => true do |t|
@@ -301,5 +302,15 @@ ActiveRecord::Schema.define(:version => 20150206083447) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
 end
