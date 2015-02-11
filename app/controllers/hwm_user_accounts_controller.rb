@@ -5,11 +5,13 @@ class HwmUserAccountsController < ApplicationController
     ## 获取参数
     @user_type = params[:type].to_i # 0为投资者，1为投资顾问
     @pagenum = params[:pagenum].to_i # 获取分页数
-    
+    @addr = params[:addr].to_s # 获取城市
+    @tag = params[:tag].to_s # 标签
+    @name = params[:name].to_s # 顾客姓名
     # 提交给view的参数，包含城市列表、标签列表、投顾信息列表
     @citylist = fetch_city_list_of_consultant   # 获取投顾所在城市列表
     @taglist = fetch_tag_list_of_consultant # 获取投顾标签列表
-    @hwm_consultant_info_list = fetch_consultant_detail_info_list @pagenum == 0 ? 1:@pagenum
+    @hwm_consultant_info_list = fetch_consultant_detail_info_list @pagenum == 0 ? 1:@pagenum , @addr, @tag, @name
     
     # 分别渲染不同视图
     if @user_type == 1  
@@ -187,7 +189,12 @@ class HwmUserAccountsController < ApplicationController
   end
   
   # 获取投资顾问详情信息
-  def fetch_consultant_detail_info_list(pagenum)
+  def fetch_consultant_detail_info_list(pagenum,addr,tag,name)
+    # 参数标准化
+    addr = addr == "" ? nil:addr
+    tag = tag == "" ? nil:tag
+    name = name == "" ? nil:name
+    
     # 分页策略
     dis_unit = 8
     page_front = (pagenum - 1) * dis_unit
@@ -200,13 +207,39 @@ class HwmUserAccountsController < ApplicationController
       @hwm_user_accounts.each do |hwm_user_account|
         advanceinfo = hwm_user_account.hwm_user_detail_info
         taglist = hwm_user_account.hwm_labels
+        ## 筛选逻辑
+        if addr != nil and addr != advanceinfo.city  ## 按照城市筛选
+          next
+        end
+        
+        if tag != nil and label_exist_in_taglist(tag,taglist) == false ## 按照标签筛选
+          next
+        end
+        
+        if name != nil and name != advanceinfo.realname ## 按照姓名筛选
+          next
+        end
+        ## 筛选逻辑结束 
         consultant_info_obj = Hwm_consultant_info.new(hwm_user_account,advanceinfo,taglist)
         @hwm_consultant_info_list << consultant_info_obj
+        
       end
     else
       puts "对象分页超出限制!"
     end
     @hwm_consultant_info_list
+  end
+  
+  ## 判断标签是否在标签列表中
+  def label_exist_in_taglist(label,taglist)
+    @exist_result = false
+    taglist.each do |tag|
+      if tag.label_content == label
+        @exist_result = true
+        break
+      end 
+    end
+    @exist_result
   end
   
   ## 投资顾问卡片详情

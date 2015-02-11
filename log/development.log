@@ -18521,3 +18521,531 @@ Served asset /scaffolds.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-11 09:28:45 +0800
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hwm_user_accounts?type=1&pagenum=1" for 127.0.0.1 at 2015-02-11 12:58:57 +0800
+Processing by HwmUserAccountsController#index as HTML
+  Parameters: {"type"=>"1", "pagenum"=>"1"}
+  [1m[36mHwmUserAccount Load (9.4ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mHwmUserDetailInfo Load (24.5ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1
+  [1m[36mHwmUserDetailInfo Load (15.0ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mHwmLabel Load (11.1ms)[0m  [1mSELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 4[0m
+  [1m[35mHwmLabel Load (10.2ms)[0m  SELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1[0m
+  Rendered hwm_user_accounts/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 332ms (Views: 45.0ms | ActiveRecord: 177.1ms)
+
+
+Started GET "/assets/hwm_comments.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/hwm_fund_managers.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_fund_managers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hwm_fund_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_fund_types.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hwm_fund_values.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_fund_values.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hwm_label_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_label_types.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hwm_labels.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_labels.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hwm_management_organizations.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_management_organizations.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hwm_product_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_product_types.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hwm_products.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_products.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hwm_resource_links.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_resource_links.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hwm_resource_pics.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_resource_pics.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hwm_studios.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_studios.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/hwm_user_accoun_ts.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_user_accoun_ts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/hwm_user_detail_infos.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_user_detail_infos.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/hwm_viewpoints.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /hwm_viewpoints.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-11 12:58:58 +0800
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/hwm_user_accounts?type=1&pagenum=1" for 127.0.0.1 at 2015-02-11 12:59:10 +0800
+Processing by HwmUserAccountsController#index as HTML
+  Parameters: {"type"=>"1", "pagenum"=>"1"}
+  [1m[35mHwmUserAccount Load (31.3ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mHwmUserDetailInfo Load (67.5ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1[0m
+  [1m[35mHwmUserDetailInfo Load (60.9ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mHwmLabel Load (59.2ms)[0m  SELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 4
+  [1m[36mHwmLabel Load (8.2ms)[0m  [1mSELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1
+  Rendered hwm_user_accounts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 552ms (Views: 6.6ms | ActiveRecord: 445.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_values.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_fund_values.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_label_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_label_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_fund_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_comments.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_managers.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_fund_managers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_labels.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_labels.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_management_organizations.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_management_organizations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_product_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_product_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_products.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_links.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_resource_links.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_pics.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_resource_pics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_studios.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_studios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_accoun_ts.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_user_accoun_ts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_detail_infos.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_user_detail_infos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_viewpoints.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /hwm_viewpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-11 12:59:11 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hwm_user_accounts?type=1&pagenum=1" for 127.0.0.1 at 2015-02-11 12:59:28 +0800
+Processing by HwmUserAccountsController#index as HTML
+  Parameters: {"type"=>"1", "pagenum"=>"1"}
+  [1m[36mHwmUserAccount Load (11.7ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mHwmUserDetailInfo Load (28.0ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1
+  [1m[36mHwmUserDetailInfo Load (19.1ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mHwmLabel Load (46.4ms)[0m  [1mSELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 4[0m
+  [1m[35mHwmLabel Load (152.8ms)[0m  SELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1[0m
+  Rendered hwm_user_accounts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 601ms (Views: 6.3ms | ActiveRecord: 496.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:28 +0800
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/hwm_fund_values.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_fund_values.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_comments.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_managers.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_fund_managers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_label_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_label_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_fund_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_labels.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_labels.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_management_organizations.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_management_organizations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_product_types.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_product_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_products.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_links.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_resource_links.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_pics.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_resource_pics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_studios.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_studios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_accoun_ts.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_user_accoun_ts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_detail_infos.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_user_detail_infos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_viewpoints.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /hwm_viewpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-11 12:59:29 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hwm_user_accounts?type=1&pagenum=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Processing by HwmUserAccountsController#index as HTML
+  Parameters: {"type"=>"1", "pagenum"=>"1"}
+  [1m[35mHwmUserAccount Load (11.8ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mHwmUserDetailInfo Load (14.4ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1[0m
+  [1m[35mHwmUserDetailInfo Load (8.6ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mHwmLabel Load (6.1ms)[0m  SELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 4
+  [1m[36mHwmLabel Load (6.9ms)[0m  [1mSELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1
+  Rendered hwm_user_accounts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 220ms (Views: 32.3ms | ActiveRecord: 122.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_comments.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_values.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_fund_values.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_fund_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_managers.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_fund_managers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_label_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_label_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_labels.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_labels.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_management_organizations.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_management_organizations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_product_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_product_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_products.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_links.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_resource_links.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_pics.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_resource_pics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_studios.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_studios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_accoun_ts.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_user_accoun_ts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_detail_infos.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_user_detail_infos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_viewpoints.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /hwm_viewpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-11 13:00:19 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hwm_user_accounts?type=1&pagenum=1" for 127.0.0.1 at 2015-02-11 13:02:41 +0800
+Processing by HwmUserAccountsController#index as HTML
+  Parameters: {"type"=>"1", "pagenum"=>"1"}
+  [1m[36mHwmUserAccount Load (14.7ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mHwmUserDetailInfo Load (19.5ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1
+  [1m[36mHwmUserDetailInfo Load (18.1ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mHwmLabel Load (17.3ms)[0m  [1mSELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 4[0m
+  [1m[35mHwmLabel Load (54.6ms)[0m  SELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 5
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1[0m
+  Rendered hwm_user_accounts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 397ms (Views: 6.5ms | ActiveRecord: 292.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_managers.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_fund_managers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_comments.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_label_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_label_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_values.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_fund_values.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_fund_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_labels.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_labels.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_management_organizations.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_management_organizations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_product_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_product_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_products.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_links.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_resource_links.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_pics.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_resource_pics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_studios.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_studios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_accoun_ts.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_user_accoun_ts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_detail_infos.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_user_detail_infos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_viewpoints.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /hwm_viewpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-11 13:02:42 +0800
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/hwm_user_accounts?type=1&pagenum=1" for 127.0.0.1 at 2015-02-11 13:02:57 +0800
+Processing by HwmUserAccountsController#index as HTML
+  Parameters: {"type"=>"1", "pagenum"=>"1"}
+  [1m[35mHwmUserAccount Load (18.4ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mHwmUserDetailInfo Load (17.3ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1[0m
+  [1m[35mHwmUserDetailInfo Load (392.4ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)[0m
+  [1m[35mHwmLabel Load (20.6ms)[0m  SELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 4
+  [1m[36mHwmLabel Load (6.7ms)[0m  [1mSELECT `hwm_labels`.* FROM `hwm_labels` INNER JOIN `hwm_user_account_hwm_labels` ON `hwm_labels`.`id` = `hwm_user_account_hwm_labels`.`hwm_label_id` WHERE `hwm_user_account_hwm_labels`.`hwm_user_account_id` = 5[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_accounts`.* FROM `hwm_user_accounts` WHERE (hwm_user_account_role_id > 0)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `hwm_user_detail_infos`.* FROM `hwm_user_detail_infos` WHERE `hwm_user_detail_infos`.`hwm_user_account_id` = 5 LIMIT 1
+  Rendered hwm_user_accounts/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 661ms (Views: 6.4ms | ActiveRecord: 561.6ms)
+
+
+Started GET "/assets/hwm_comments.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_label_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_label_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_fund_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_managers.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_fund_managers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_fund_values.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_fund_values.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_labels.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_labels.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_management_organizations.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_management_organizations.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_product_types.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_product_types.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_products.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_products.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_links.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_resource_links.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_resource_pics.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_resource_pics.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_studios.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_studios.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_accoun_ts.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_user_accoun_ts.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/hwm_user_detail_infos.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_user_detail_infos.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/hwm_viewpoints.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /hwm_viewpoints.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-11 13:02:58 +0800
+Served asset /application.js - 304 Not Modified (0ms)
