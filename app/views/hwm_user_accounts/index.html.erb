@@ -1,39 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>服务首页</title>
-	<link href="/hwm_user_accounts/css/common.css" type="text/css" rel="stylesheet">
-	<link href="/hwm_user_accounts/css/service.css" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="/hwm_user_accounts/js/jquery-1.2.6.pack.js"></script>
-	<script type="text/javascript" src="/hwm_user_accounts/js/common.js"></script>
-	<script type="text/javascript" src="/hwm_user_accounts/js/service.js"></script> 
-</head>
-<body>
-	<div id="top">
-        <div id="top_list" class="w_1100">
-        	<a href="javascript:void(0)">登录/注册</a>
-        	<a href="javascript:void(0)">加盟工作室</a>
-        	<a href="javascript:void(0)">大众理财</a>
-        </div>
-	</div>
-	<div id="header">
-		<div id="header_list" class="w_1100">
-			<div class="list_left">
-				<p class="logo_pic"><img src="/hwm_user_accounts/images/logo.jpg" alt="logo" /></p>
-				<span class="logo_name">嘉实财富</span>
-			</div>
-			<div class="list_right">
-				<ul class="list_item">
-					<li><a href="">定制服务</a></li>
-					<li><a href="">顾问/工作室</a></li>
-					<li><a href="">观点视角</a></li>
-					<li style="padding-right:0;"><a href="">产品投资</a></li>
-					<div class="clear"></div>
-				</ul>	
-			</div>
-		</div>
-	</div>
+<% provide(:title, "服务首页") %>
 	<div id="content">
 
 		<div id="content_list" class="w_1100">
@@ -49,10 +14,12 @@
 						<p class="c_title">所在城市</p>
 						<p class="c_all">全部</p>
 						<p class="c_name">
-							<a href="javascript:void(0)">北京</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="javascript:void(0)">上海</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="javascript:void(0)">广州</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<a href="javascript:void(0)">深圳</a>
+							<% @citylist.each do |city_name| %>
+								<%= link_to(city_name,
+											hwm_user_accounts_path(params.slice(:addr,:type,:tag).merge(addr: city_name, format:'js')),
+											remote: true
+										) %>
+							<% end %>
 						</p>
 						<div class="clear"></div>
 					</div>
@@ -60,6 +27,9 @@
 						<p class="c_title">擅长领域</p>
 						<p class="c_all">全部</p>
 						<p class="c_name">
+							<% @taglist.each do |tag_name| %>
+								<%= link_to tag_name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<% end %>
 							<a href="javascript:void(0)">国内资产配置</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<a href="javascript:void(0)">跨境资产配置</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							<a href="javascript:void(0)">不动产投资</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -90,8 +60,28 @@
 				</div>
 			</div>
 		</div>
+		<div>
+		</div>
 		<div id="contact" class="w_1100">
 				<ul class="contact_item">
+					<% @hwm_consultant_info_list.each do |consultant| %>
+						<li>
+							<div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+							<div class="person_name">
+								<span class="p_name"><%=consultant.userinfo.realname%></span>
+								<span class="adder_name"><%=consultant.advanceinfo.city%></span>
+							</div>
+							<div class="person_describe">
+								<% consultant.taglist.each do |tag| %>
+									<span class="de_tit"><%= tag.label_content %></span>
+								<% end %>
+								<span class="de_tit">PE/VC</span>
+								<span class="de_tit">私募股权</span>
+								<span id="title_three" class="de_tit">一级市场</span>
+								<div class="clear"></div>
+							</div>
+						</li>
+					<% end %>
 					<li>
 						<div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
 						<div class="person_name">
@@ -210,17 +200,3 @@
 				</div>
 		</div>
 	</div>
-	<div id="footer">
-		<div class="footer_list">
-			<div class="m_center">
-				<span><a href="javascript:void(0)">关于我们</a></span>
-				<span><a href="javascript:void(0)">联系我们</a></span>
-				<span><a href="javascript:void(0)">加盟我们</a></span>
-				<span><a href="javascript:void(0)">帮助中心</a></span>
-				<span><a href="javascript:void(0)">用户反馈</a></span>
-			</div>
-		</div>
-		<div class="bottom_title">&copy;2014&nbsp;&nbsp;neartrader京公网安备11010802012285号 | 京icp备12031756号-3</div>
-	</div>
-</body>
-</html>
