@@ -9,8 +9,7 @@ class HwmUserAccountsController < ApplicationController
     @pagenum = params[:pagenum].to_i # 获取分页数
     @addr = params[:addr].to_s # 获取城市
     @tag = params[:tag].to_s # 标签
-    @name = params[:name].to_s # 顾客姓名
-    
+    @name = params[:name].to_s # 顾客姓名 
     
     # 提交给view的参数，包含城市列表、标签列表、投顾信息列表
     @citylist = fetch_city_list_of_consultant   # 获取投顾所在城市列表
@@ -65,8 +64,6 @@ class HwmUserAccountsController < ApplicationController
     @hwm_user_account.encrypt_pwd =  Digest::MD5.hexdigest(@hwm_user_account.password)
     @vericode = params[:vericode]
     validate_result = validatecode @hwm_user_account.mobile @vericode
-    
-
     
     respond_to do |format|
       if @hwm_user_account.save
@@ -166,6 +163,7 @@ class HwmUserAccountsController < ApplicationController
     # 列表页面返回所在城市列表、擅长领域列表、投资顾问列表以及对应的标签列表
       @hwm_user_accounts = HwmUserAccount.all
   end
+  
   
   
   private 
