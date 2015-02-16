@@ -20,6 +20,7 @@ class HwmUserAccountsController < ApplicationController
     if @user_type == 1  
       respond_to do |format|
         format.html # index.html.erb
+        format.js
         format.json { render json: @hwm_user_accounts }
       end
     else

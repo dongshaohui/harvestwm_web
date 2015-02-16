@@ -1,0 +1,198 @@
+  <div id="content">
+
+    <div id="content_list" class="w_1100">
+      <div class="content_item">
+        <p class="text_01">首页&gt;顾问&#124;工作室</p>
+        <p class="text_02">
+          <span class="team">顾问团队</span>
+          <span>&nbsp;&#124;&nbsp;工作室</span>
+          <span class="o_color"></span>
+        </p>
+        <div class="text_03">
+          <div class="city inside_p">
+            <p class="c_title">所在城市</p>
+            <p class="c_all">全部</p>
+            <p class="c_name">
+              <% @citylist.each do |city_name| %>
+                <%= link_to(city_name, hwm_user_accounts_path(params.slice(:addr,:type,:tag).merge(addr: city_name, format:'js')), remote: true) %>
+              <% end %>
+            </p>
+            <div class="clear"></div>
+          </div>
+          <div class="area inside_p">
+            <p class="c_title">擅长领域</p>
+            <p class="c_all">全部</p>
+            <p class="c_name">
+              <% @taglist.each do |tag_name| %>
+                <%= link_to(tag_name, hwm_user_accounts_path(params.slice(:addr,:type,:tag).merge(tag: tag_name)), remote: true) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <% end %>
+              <a href="javascript:void(0)">国内资产配置</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:void(0)">跨境资产配置</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:void(0)">不动产投资</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:void(0)">财富传承</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:void(0)">投资移民</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:void(0)">子女教育</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:void(0)">高端医疗</a>
+            </p>
+            <div class="clear"></div>
+          </div>
+          <div class="member inside_p">
+            <p class="c_title">嘉实成员</p>
+            <p class="c_all">全部</p>
+            <p class="c_name">
+              <a href="javascript:void(0)">嘉实</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="javascript:void(0)">非嘉实</a></p>
+            <div class="clear"></div>
+          </div>
+          <div class="customer inside_p">
+            <p class="c_title">顾客姓名</p>
+            <p class="name_search">
+              <span class="s_k"><input type="text" /></span>
+              <span class="s_pic"></span>
+            </p>
+            <p class="c_name con_clear">清空</p>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+    <div id="contact" class="w_1100">
+        <ul class="contact_item">
+          <% @hwm_consultant_info_list.each do |consultant| %>
+            <li>
+              <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+              <div class="person_name">
+                <span class="p_name"><%=consultant.userinfo.realname%></span>
+                <span class="adder_name"><%=consultant.advanceinfo.city%></span>
+              </div>
+              <div class="person_describe">
+                <% consultant.taglist.each do |tag| %>
+                  <span class="de_tit"><%= tag.label_content %></span>
+                <% end %>
+                <span class="de_tit">PE/VC</span>
+                <span class="de_tit">私募股权</span>
+                <span id="title_three" class="de_tit">一级市场</span>
+                <div class="clear"></div>
+              </div>
+            </li>
+          <% end %>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="person_picture"><img src="/hwm_user_accounts/images/renwu/a-1.jpg" alt="" /></div>
+            <div class="person_name">
+              <span class="p_name">张国津</span>
+              <span class="adder_name">北京</span>
+            </div>
+            <div class="person_describe">
+              <span class="de_tit">PE/VC</span>
+              <span class="de_tit">私募股权</span>
+              <span id="title_three" class="de_tit">一级市场</span>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <div class="clear"></div>
+        </ul>
+        <div id="next_above">
+          <span><a class="prev_p" href="javascript:void(0)">上一页</a></span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>...</span>
+          <span><a class="next_p" href="javascript:void(0)">下一页</a></span>
+        </div>
+    </div>
+  </div>
