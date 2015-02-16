@@ -1,75 +1,186 @@
-<h1>Listing hwm_studios</h1>
-
-<table>
-  <tr>
-    <th>Hwm user account</th>
-    <th>Auth type</th>
-    <th>Tag</th>
-    <th>Industry</th>
-    <th>Nature</th>
-    <th>Studioname</th>
-    <th>Studio intro</th>
-    <th>Studio desc</th>
-    <th>Country</th>
-    <th>Province</th>
-    <th>City</th>
-    <th>District</th>
-    <th>Address</th>
-    <th>Tel</th>
-    <th>Email</th>
-    <th>Fax</th>
-    <th>Corp repr</th>
-    <th>Share holder</th>
-    <th>Employee number</th>
-    <th>Reg no</th>
-    <th>Reg addr</th>
-    <th>Establish date</th>
-    <th>Due date</th>
-    <th>Organize code</th>
-    <th>Tax reg cert</th>
-    <th>Verify state</th>
-    <th>Verify reason</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @hwm_studios.each do |hwm_studio| %>
-  <tr>
-    <td><%= hwm_studio.hwm_user_account_id %></td>
-    <td><%= hwm_studio.auth_type %></td>
-    <td><%= hwm_studio.tag %></td>
-    <td><%= hwm_studio.industry %></td>
-    <td><%= hwm_studio.nature %></td>
-    <td><%= hwm_studio.studioname %></td>
-    <td><%= hwm_studio.studio_intro %></td>
-    <td><%= hwm_studio.studio_desc %></td>
-    <td><%= hwm_studio.country %></td>
-    <td><%= hwm_studio.province %></td>
-    <td><%= hwm_studio.city %></td>
-    <td><%= hwm_studio.district %></td>
-    <td><%= hwm_studio.address %></td>
-    <td><%= hwm_studio.tel %></td>
-    <td><%= hwm_studio.email %></td>
-    <td><%= hwm_studio.fax %></td>
-    <td><%= hwm_studio.corp_repr %></td>
-    <td><%= hwm_studio.share_holder %></td>
-    <td><%= hwm_studio.employee_number %></td>
-    <td><%= hwm_studio.reg_no %></td>
-    <td><%= hwm_studio.reg_addr %></td>
-    <td><%= hwm_studio.establish_date %></td>
-    <td><%= hwm_studio.due_date %></td>
-    <td><%= hwm_studio.organize_code %></td>
-    <td><%= hwm_studio.tax_reg_cert %></td>
-    <td><%= hwm_studio.verify_state %></td>
-    <td><%= hwm_studio.verify_reason %></td>
-    <td><%= link_to 'Show', hwm_studio %></td>
-    <td><%= link_to 'Edit', edit_hwm_studio_path(hwm_studio) %></td>
-    <td><%= link_to 'Destroy', hwm_studio, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Hwm studio', new_hwm_studio_path %>
+<% provide(:title, "工作室首页") %>
+<div id="content">
+	<div id="content_list" class="w_1100">
+		<div class="content_item">
+			<p class="text_01">首页&gt;顾问&#124;工作室</p>
+			<p class="text_02">
+				<a href="#"><span class="team" style="color:#666">顾问团队</span></a>
+				&nbsp;&#124;&nbsp;<a href="#" style="color:#ff8328"><span>工作室</span></a>
+				<span class="o_color" style="margin-left:95px;*margin-left:-74px;"></span>
+			</p>
+			<div class="text_03">
+				<div class="city inside_p">
+					<p class="c_title">所在城市</p>
+					<p class="c_name">
+						<a class="c_all" href="javascript:void(0)">全部</a>
+						<a class="" href="javascript:void(0)">北京</a>
+						<a class="" href="javascript:void(0)">上海</a>
+						<a class="" href="javascript:void(0)">广州</a>
+						<a class="" href="javascript:void(0)">深圳</a>
+					</p>
+					<div class="clear"></div>
+				</div>
+				<div class="member inside_p">
+					<p class="c_title">嘉实成员</p>
+					<p class="c_name">
+						<a class="c_all" href="javascript:void(0)">全部</a>
+						<a class="" href="javascript:void(0)">嘉实</a>
+						<a class="" href="javascript:void(0)">非嘉实</a></p>
+					<div class="clear"></div>
+				</div>
+				<div class="customer inside_p">
+					<p class="c_title">顾客姓名</p>
+					<p class="name_search">
+						<span class="s_k"><input type="text" /></span>
+						<span class="s_pic"></span>
+					</p>
+					<p class="c_name con_clear">清空</p>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="office_item">
+	        <div class="off_left">
+	        	<div class="o_list">
+	        		<div class="office_p">
+	        			<img src="../images/01_03.png" alt="" />
+	        		</div>
+	        		<div class="office_tit">
+	        			<p class="office_title">嘉实财富北京国贸工作室<span class="advicer"><i>26</i>名顾问</span></p>
+	        			<p class="office_detail">
+	        				电话：010-4838848
+	        				<br/>	
+	        				地址：北京市东城区建国门万豪写字楼A座
+	        				<br/>
+                              简介：提供多样化的理财服务需求，主攻A股市场。内设高尔夫俱乐部
+	        			</p>
+	        		</div>
+	        		<div class="clear"></div>
+	        	</div>
+	        </div>
+	        <div class="off_right">
+	        	<ul id="picture">
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<div class="clear"></div>
+	        	</ul>
+	        </div>
+	        <div class="clear"></div>
+        </div>
+        <div id="office_item">
+	        <div class="off_left">
+	        	<div class="o_list">
+	        		<div class="office_p">
+	        			<img src="../images/01_03.png" alt="" />
+	        		</div>
+	        		<div class="office_tit">
+	        			<p class="office_title">嘉实财富北京国贸工作室<span class="advicer"><i>26</i>名顾问</span></p>
+	        			<p class="office_detail">
+	        				电话：010-4838848
+	        				<br/>	
+	        				地址：北京市东城区建国门万豪写字楼A座
+	        				<br/>
+                              简介：提供多样化的理财服务需求，主攻A股市场。内设高尔夫俱乐部
+	        			</p>
+	        		</div>
+	        		<div class="clear"></div>
+	        	</div>
+	        </div>
+	        <div class="off_right">
+	        	<ul id="picture">
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<div class="clear"></div>
+	        	</ul>
+	        </div>
+	        <div class="clear"></div>
+        </div>
+        <div id="office_item">
+	        <div class="off_left">
+	        	<div class="o_list">
+	        		<div class="office_p">
+	        			<img src="../images/01_03.png" alt="" />
+	        		</div>
+	        		<div class="office_tit">
+	        			<p class="office_title">嘉实财富北京国贸工作室<span class="advicer"><i>26</i>名顾问</span></p>
+	        			<p class="office_detail">
+	        				电话：010-4838848
+	        				<br/>	
+	        				地址：北京市东城区建国门万豪写字楼A座
+	        				<br/>
+                              简介：提供多样化的理财服务需求，主攻A股市场。内设高尔夫俱乐部
+	        			</p>
+	        		</div>
+	        		<div class="clear"></div>
+	        	</div>
+	        </div>
+	        <div class="off_right">
+	        	<ul id="picture">
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<li>
+	        			<span class="adver_pic">
+	        				<img src="../images/renwu/a-1.jpg" alt=""/>
+	        			</span>
+	        			<p class="adver_name">张国津</p>
+	        		</li>
+	        		<div class="clear"></div>
+	        	</ul>
+	        </div>
+	        <div class="clear"></div>
+        </div>
+	</div>
+	<div id="office_page" class="w_1100">
+		    <span class=""><a class="o_pre page_ff" href="javascript:void(0)">上一页</a></span>
+			<a href="javascript:void(0)"><span class="o_page">1</span></a>
+			<a href="javascript:void(0)"><span class="o_page">2</span></a>
+			<a href="javascript:void(0)"><span class="o_page">3</span></a>
+			<a href="javascript:void(0)"><span class="o_page">4</span></a>
+			<a href="javascript:void(0)"><span class="o_page">5</span></a>
+			<span class="">...</span>
+			<a href="javascript:void(0)"><span class="o_page">10</span></a>
+			<span class=""><a class="o_nex page_ff" href="javascript:void(0)">下一页</a></span>
+	</div>
+</div>	
