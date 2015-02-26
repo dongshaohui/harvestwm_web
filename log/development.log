@@ -19580,3 +19580,167 @@ Served asset /scaffolds.css - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-02-13 10:23:04 +0800
 Served asset /application.js - 304 Not Modified (1ms)
+  [1m[36m (17.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateHwmUserAccounts (20150112060620)
+Migrating to CreateHwmResourcePics (20150112061458)
+Migrating to CreateHwmResourceLinks (20150112062303)
+Migrating to CreateHwmStudios (20150112062613)
+Migrating to CreateHwmUserDetailInfos (20150112062837)
+Migrating to CreateHwmViewpoints (20150112063154)
+Migrating to CreateHwmComments (20150112063320)
+Migrating to CreateHwmLabels (20150112063652)
+Migrating to CreateHwmLabelTypes (20150112064008)
+Migrating to CreateHwmProducts (20150112064130)
+Migrating to CreateHwmProductTypes (20150112064319)
+Migrating to CreateHwmFundTypes (20150112064510)
+Migrating to CreateHwmFundValues (20150112064612)
+Migrating to CreateHwmManagementOrganizations (20150112064831)
+Migrating to CreateHwmFundManagers (20150112065023)
+Migrating to AddHwmUserAccountPassword (20150113083851)
+Migrating to CreateHwmViewpointHwmLabels (20150205025049)
+Migrating to CreateHwmLabelTypeHwmLabels (20150205052056)
+Migrating to CreateHwmStudioHwmResourceLinks (20150205055121)
+Migrating to CreateHwmStudioHwmResourcePics (20150205071955)
+Migrating to CreateHwmUserAccountHwmLabels (20150205080727)
+Migrating to CreateHwmUserAccountHwmResourcePics (20150205093024)
+Migrating to CreateHwmUserAccountHwmProducts (20150205101850)
+Migrating to AddProductTypeToHwmProduct (20150206013201)
+Migrating to CreateHwmUserAccountRoles (20150206053737)
+Migrating to AddHwmUserAccountRoleIdToUserAccount (20150206060742)
+Migrating to AlterHwmStudioSegmentDefaultStatement (20150206083447)
+Migrating to AddSessionsTable (20150211092812)
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_comments")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_fund_managers")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_fund_types")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_fund_values")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_hwm_fund_values_on_hwm_product_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_label_type_hwm_labels")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_label_types")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_labels")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_labels_on_label_content')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_management_organizations")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_product_types")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_products")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_resource_links")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_resource_links_on_addr')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_resource_pics")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_resource_pics_on_addr')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_studio_hwm_resource_links")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_studio_hwm_resource_pics")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_studios")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_studios_on_studioname')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_studios_on_hwm_user_account_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_user_account_hwm_labels")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_account_hwm_products")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_user_account_hwm_resource_pics")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("hwm_user_account_roles")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_user_account_roles_on_hwm_user_account_type')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_user_accounts")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_hwm_user_accounts_on_nickname')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_hwm_user_accounts_on_mobile')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_user_detail_infos")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_hwm_user_detail_infos_on_hwm_user_account_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("hwm_viewpoint_hwm_labels")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("hwm_viewpoints")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[36m (8.4ms)[0m  [1mDROP DATABASE IF EXISTS `harvestwm_website`[0m
+Mysql2::Error: OPERATION need to be executed set by ADMIN.: DROP DATABASE IF EXISTS `harvestwm_website`
+  [1m[35m (9.0ms)[0m  DROP TABLE `hwm_comments`
+  [1m[36m (11.2ms)[0m  [1mCREATE TABLE `hwm_comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_viewpoint_id` int(11) NOT NULL, `hwm_user_account_id` int(11) NOT NULL, `comment_content` text NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (13.9ms)[0m  DROP TABLE `hwm_fund_managers`
+  [1m[36m (12.8ms)[0m  [1mCREATE TABLE `hwm_fund_managers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `namea` varchar(255) NOT NULL, `intro` text, `work_period` varchar(255), `expert_fund_type` varchar(255), `yearly_return` varchar(255), `max_profit` varchar(255), `max_retrace` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.1ms)[0m  DROP TABLE `hwm_fund_types`
+  [1m[36m (15.6ms)[0m  [1mCREATE TABLE `hwm_fund_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `desc` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.9ms)[0m  DROP TABLE `hwm_fund_values`
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE `hwm_fund_values` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_product_id` int(11) NOT NULL, `fundcode` varchar(255), `unit_value` varchar(255), `accu_value` varchar(255), `day_change` varchar(255), `trade_date` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (20.8ms)[0m  CREATE UNIQUE INDEX `index_hwm_fund_values_on_hwm_product_id` ON `hwm_fund_values` (`hwm_product_id`)
+  [1m[36m (21.2ms)[0m  [1mDROP TABLE `hwm_label_type_hwm_labels`[0m
+  [1m[35m (17.4ms)[0m  CREATE TABLE `hwm_label_type_hwm_labels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_label_type_id` int(11), `hwm_label_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (9.9ms)[0m  [1mDROP TABLE `hwm_label_types`[0m
+  [1m[35m (12.2ms)[0m  CREATE TABLE `hwm_label_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `label_type_content` varchar(255) NOT NULL, `label_type_desc` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (9.2ms)[0m  [1mDROP TABLE `hwm_labels`[0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE `hwm_labels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `label_content` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (21.7ms)[0m  [1mCREATE UNIQUE INDEX `index_hwm_labels_on_label_content` ON `hwm_labels` (`label_content`)[0m
+  [1m[35m (9.9ms)[0m  DROP TABLE `hwm_management_organizations`
+  [1m[36m (13.2ms)[0m  [1mCREATE TABLE `hwm_management_organizations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `cnname` varchar(255) NOT NULL, `enname` varchar(255), `short_name` varchar(255), `capital` varchar(255), `legal_repr` varchar(255), `nature` varchar(255), `found_date` date, `invest_field` varchar(255), `desc` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (9.7ms)[0m  DROP TABLE `hwm_product_types`
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE `hwm_product_types` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) NOT NULL, `desc` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (9.8ms)[0m  DROP TABLE `hwm_products`
+  [1m[36m (10.4ms)[0m  [1mCREATE TABLE `hwm_products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_type_id` int(11) NOT NULL, `fund_type_id` int(11), `product_name` varchar(255) NOT NULL, `start_date` date, `end_date` date, `due_time` varchar(255), `risk_level` int(11), `risk_control` varchar(255), `state` int(11), `establish_date` date, `manage_fee` varchar(255), `custody_fee` varchar(255), `subscribe_fee` varchar(255), `redeem_fee` varchar(255), `custody_bank` varchar(255), `expect_profit` varchar(255), `profit_desc` text, `raise_size` varchar(255), `init_capital` varchar(255), `recommend_reason` text, `investment` varchar(255), `repay_source` varchar(255), `financer` varchar(255), `financer_desc` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `hwm_product_type_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (13.3ms)[0m  DROP TABLE `hwm_resource_links`
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE `hwm_resource_links` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `link_type` int(11) NOT NULL, `source_type` int(11) NOT NULL, `addr` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (18.3ms)[0m  CREATE UNIQUE INDEX `index_hwm_resource_links_on_addr` ON `hwm_resource_links` (`addr`)
+  [1m[36m (10.9ms)[0m  [1mDROP TABLE `hwm_resource_pics`[0m
+  [1m[35m (14.1ms)[0m  CREATE TABLE `hwm_resource_pics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `source_type` int(11) NOT NULL, `addr` varchar(255) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (20.8ms)[0m  [1mCREATE UNIQUE INDEX `index_hwm_resource_pics_on_addr` ON `hwm_resource_pics` (`addr`)[0m
+  [1m[35m (24.6ms)[0m  DROP TABLE `hwm_studio_hwm_resource_links`
+  [1m[36m (40.4ms)[0m  [1mCREATE TABLE `hwm_studio_hwm_resource_links` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_studio_id` int(11), `hwm_resource_link_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.9ms)[0m  DROP TABLE `hwm_studio_hwm_resource_pics`
+  [1m[36m (10.7ms)[0m  [1mCREATE TABLE `hwm_studio_hwm_resource_pics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_studio_id` int(11), `hwm_resource_pic_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.2ms)[0m  DROP TABLE `hwm_studios`
+  [1m[36m (23.0ms)[0m  [1mCREATE TABLE `hwm_studios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_user_account_id` int(11) NOT NULL, `auth_type` int(11) DEFAULT 1 NOT NULL, `tag` int(11) DEFAULT 0 NOT NULL, `industry` varchar(255), `nature` varchar(255), `studioname` varchar(255) NOT NULL, `studio_intro` varchar(255), `studio_desc` text, `country` varchar(255) NOT NULL, `province` varchar(255) NOT NULL, `city` varchar(255) NOT NULL, `district` varchar(255) NOT NULL, `address` text NOT NULL, `tel` varchar(255) NOT NULL, `email` varchar(255), `fax` varchar(255), `corp_repr` varchar(255), `share_holder` varchar(255), `employee_number` int(11), `reg_no` varchar(255), `reg_addr` varchar(255), `establish_date` date, `due_date` date, `organize_code` varchar(255), `tax_reg_cert` varchar(255), `verify_state` int(11) DEFAULT 3 NOT NULL, `verify_reason` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (19.7ms)[0m  CREATE UNIQUE INDEX `index_hwm_studios_on_hwm_user_account_id` ON `hwm_studios` (`hwm_user_account_id`)
+  [1m[36m (20.2ms)[0m  [1mCREATE UNIQUE INDEX `index_hwm_studios_on_studioname` ON `hwm_studios` (`studioname`)[0m
+  [1m[35m (11.4ms)[0m  DROP TABLE `hwm_user_account_hwm_labels`
+  [1m[36m (10.7ms)[0m  [1mCREATE TABLE `hwm_user_account_hwm_labels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_user_account_id` int(11), `hwm_label_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (11.1ms)[0m  DROP TABLE `hwm_user_account_hwm_products`
+  [1m[36m (14.5ms)[0m  [1mCREATE TABLE `hwm_user_account_hwm_products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_user_account_id` int(11), `hwm_product_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (12.9ms)[0m  DROP TABLE `hwm_user_account_hwm_resource_pics`
+  [1m[36m (10.3ms)[0m  [1mCREATE TABLE `hwm_user_account_hwm_resource_pics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_user_account_id` int(11), `hwm_resource_pic_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.6ms)[0m  DROP TABLE `hwm_user_account_roles`
+  [1m[36m (17.2ms)[0m  [1mCREATE TABLE `hwm_user_account_roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_user_account_type` varchar(255), `hwm_user_account_role_desc` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (16.1ms)[0m  CREATE UNIQUE INDEX `index_hwm_user_account_roles_on_hwm_user_account_type` ON `hwm_user_account_roles` (`hwm_user_account_type`)
+  [1m[36m (12.0ms)[0m  [1mDROP TABLE `hwm_user_accounts`[0m
+  [1m[35m (14.7ms)[0m  CREATE TABLE `hwm_user_accounts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nickname` varchar(255) NOT NULL, `realname` varchar(255), `certno` varchar(255), `certtype` varchar(255), `mobile` varchar(255) NOT NULL, `email` varchar(255), `encrypt_pwd` varchar(255) NOT NULL, `hwm_studio_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `password` varchar(255), `hwm_user_account_role_id` int(11)) ENGINE=InnoDB
+  [1m[36m (22.8ms)[0m  [1mCREATE UNIQUE INDEX `index_hwm_user_accounts_on_mobile` ON `hwm_user_accounts` (`mobile`)[0m
+  [1m[35m (15.6ms)[0m  CREATE UNIQUE INDEX `index_hwm_user_accounts_on_nickname` ON `hwm_user_accounts` (`nickname`)
+  [1m[36m (9.0ms)[0m  [1mDROP TABLE `hwm_user_detail_infos`[0m
+  [1m[35m (12.5ms)[0m  CREATE TABLE `hwm_user_detail_infos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_user_account_id` int(11) NOT NULL, `social_account` varchar(255), `recommender` varchar(255), `recommender_type` int(11), `cert_valid_date` date, `nationality` varchar(255), `province` varchar(255), `city` varchar(255), `district` varchar(255), `address` varchar(255), `postcode` varchar(255), `tel` varchar(255), `fax` varchar(255), `interest` varchar(255), `sex` tinyint(1), `marriage` int(11), `education` int(11), `workunit` varchar(255), `occupation_code` int(11), `income` float, `population` int(11), `asset` float, `application_number` varchar(255), `transaction_date` date, `transaction_time` datetime, `transaction_account` varchar(255), `transaction_channel` int(11), `send_bill_choice` int(11), `send_bill_type` int(11), `sail_code` varchar(255), `business_code` varchar(255), `network_code` varchar(255), `custom_risk_level` int(11), `self_intro` text, `edu_background` text, `certificate` text, `work_intro` text, `case_intro` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (13.8ms)[0m  [1mCREATE UNIQUE INDEX `index_hwm_user_detail_infos_on_hwm_user_account_id` ON `hwm_user_detail_infos` (`hwm_user_account_id`)[0m
+  [1m[35m (8.9ms)[0m  DROP TABLE `hwm_viewpoint_hwm_labels`
+  [1m[36m (12.4ms)[0m  [1mCREATE TABLE `hwm_viewpoint_hwm_labels` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_viewpoint_id` int(11), `hwm_label_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (8.5ms)[0m  DROP TABLE `hwm_viewpoints`
+  [1m[36m (37.0ms)[0m  [1mCREATE TABLE `hwm_viewpoints` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `hwm_user_account_id` int(11) NOT NULL, `title` text NOT NULL, `content` text NOT NULL, `viewtimes` int(11) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (10.7ms)[0m  DROP TABLE `sessions`
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE `sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `session_id` varchar(255) NOT NULL, `data` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (25.8ms)[0m  CREATE INDEX `index_sessions_on_session_id` ON `sessions` (`session_id`)
+  [1m[36m (13.9ms)[0m  [1mCREATE INDEX `index_sessions_on_updated_at` ON `sessions` (`updated_at`)[0m
+  [1m[35m (9.0ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36m (11.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[36m (25.7ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateHwmUserAccounts (20150112060620)
+Migrating to CreateHwmResourcePics (20150112061458)
+Migrating to CreateHwmResourceLinks (20150112062303)
+Migrating to CreateHwmStudios (20150112062613)
+Migrating to CreateHwmUserDetailInfos (20150112062837)
+Migrating to CreateHwmViewpoints (20150112063154)
+Migrating to CreateHwmComments (20150112063320)
+Migrating to CreateHwmLabels (20150112063652)
+Migrating to CreateHwmLabelTypes (20150112064008)
+Migrating to CreateHwmProducts (20150112064130)
+Migrating to CreateHwmProductTypes (20150112064319)
+Migrating to CreateHwmFundTypes (20150112064510)
+Migrating to CreateHwmFundValues (20150112064612)
+Migrating to CreateHwmManagementOrganizations (20150112064831)
+Migrating to CreateHwmFundManagers (20150112065023)
+Migrating to AddHwmUserAccountPassword (20150113083851)
+Migrating to CreateHwmViewpointHwmLabels (20150205025049)
+Migrating to CreateHwmLabelTypeHwmLabels (20150205052056)
+Migrating to CreateHwmStudioHwmResourceLinks (20150205055121)
+Migrating to CreateHwmStudioHwmResourcePics (20150205071955)
+Migrating to CreateHwmUserAccountHwmLabels (20150205080727)
+Migrating to CreateHwmUserAccountHwmResourcePics (20150205093024)
+Migrating to CreateHwmUserAccountHwmProducts (20150205101850)
+Migrating to AddProductTypeToHwmProduct (20150206013201)
+Migrating to CreateHwmUserAccountRoles (20150206053737)
+Migrating to AddHwmUserAccountRoleIdToUserAccount (20150206060742)
+Migrating to AlterHwmStudioSegmentDefaultStatement (20150206083447)
+Migrating to AddSessionsTable (20150211092812)
+Migrating to AddJsTagToHwmUserAccount (20150226012855)
+  [1m[35m (46.3ms)[0m  ALTER TABLE `hwm_user_accounts` ADD `js_tag` int(11) DEFAULT 0
+  [1m[36m (13.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150226012855')[0m
+  [1m[35m (51.6ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
