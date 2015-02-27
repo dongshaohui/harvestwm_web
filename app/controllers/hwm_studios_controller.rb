@@ -15,7 +15,7 @@ class HwmStudiosController < ApplicationController
   def show
     @hwm_studio = HwmStudio.find(params[:id])
     @user_account_list = @hwm_studio.hwm_user_accounts ## 工作室关联的投资顾问列表
-    @product_list = 
+    @product_list = @hwm_studio.hwm_products ## 工作室关联的产品列表
     
     respond_to do |format|
       format.html # show.html.erb

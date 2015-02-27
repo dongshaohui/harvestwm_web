@@ -24,6 +24,6 @@ class HwmProduct < ActiveRecord::Base
   belongs_to :hwm_product_type # 与产品类别进行关联
 
   ## 与工作室建立关联
-  belongs_to :hwm_studio 
+  belongs_to :hwm_studio # 与工作室建立关联
   
 end
