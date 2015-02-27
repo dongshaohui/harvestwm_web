@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= javascript_include_tag "application" %>
+  <% stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+  <meta charset="UTF-8">
+  <link href="/hwm_user_accounts/css/common.css" type="text/css" rel="stylesheet">
+  <link href="/hwm_user_accounts/css/service.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="/hwm_user_accounts/js/common.js"></script>
+  <script type="text/javascript" src="/hwm_user_accounts/js/service.js"></script> 
+  <title><%= yield(:title) || 'HarvestwmWeb' %></title>
+</head>
+<body>
+
+  <div id="top">
+        <div id="top_list" class="w_1100">
+          <a href="javascript:void(0)">登录/注册</a>
+          <a href="javascript:void(0)">加盟工作室</a>
+          <a href="javascript:void(0)">大众理财</a>
+        </div>
+  </div>
+  <div id="header">
+    <div id="header_list" class="w_1100">
+      <div class="list_left">
+        <p class="logo_pic"><img src="/hwm_user_accounts/images/logo.jpg" alt="logo" /></p>
+        <span class="logo_name">嘉实财富</span>
+      </div>
+      <div class="list_right">
+        <ul class="list_item">
+          <li><a href="">定制服务</a></li>
+          <li><a href="">顾问/工作室</a></li>
+          <li><a href="">观点视角</a></li>
+          <li style="padding-right:0;"><a href="">产品投资</a></li>
+          <div class="clear"></div>
+        </ul> 
+      </div>
+    </div>
+  </div>
+
+<%= yield %>
+
+  <div id="footer">
+    <div class="footer_list">
+      <div class="m_center">
+        <span><a href="javascript:void(0)">关于我们</a></span>
+        <span><a href="javascript:void(0)">联系我们</a></span>
+        <span><a href="javascript:void(0)">加盟我们</a></span>
+        <span><a href="javascript:void(0)">帮助中心</a></span>
+        <span><a href="javascript:void(0)">用户反馈</a></span>
+      </div>
+    </div>
+    <div class="bottom_title">&copy;2014&nbsp;&nbsp;neartrader京公网安备11010802012285号 | 京icp备12031756号-3</div>
+  </div>
+
+</body>
+</html>

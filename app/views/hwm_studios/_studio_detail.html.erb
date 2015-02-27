@@ -1,0 +1,463 @@
+<!-- css 部分的layout -->
+<%= content_for :csspart do %>
+  <link href="/common/css/common.css" type="text/css" rel="stylesheet">
+  <link href="/hwm_studios/css/office_detail.css" type="text/css" rel="stylesheet">  
+<% end %>
+
+
+<!-- javascript 部分的layout -->
+<%= content_for :jspart do %> 
+  <script type="text/javascript" src="/common/js/jquery-1.2.6.pack.js"></script>
+  <script type="text/javascript" src="/hwm_studios/js/jquery.scrollto.js"></script>
+  <script type="text/javascript" src="/hwm_studios/js/service.js"></script> 
+    <script type="text/javascript">
+        $(function(){
+            //照片遮罩
+            $('.person_picture').each(function (index){
+              console.log(556);
+                $(this).hover(function(){
+                    $(this).find('.mask').addClass('show');
+                },function(){
+                    $(this).find('.mask').removeClass('show');
+                });
+            });
+            //点击导航菜单下面的黄色条移动
+            $('.hw_item a').each(function (index){
+                $(this).click(function(){
+                    var left=index*180;
+                    $('.orange_item').css({'left':left});
+                });
+            });
+            //点击导航菜单滚动到相应的内容
+            $('#hw_o_d').click(function (){
+                $.scrollTo('#office_introduce', 700);
+            });
+            $('#hw_a_a').click(function (){
+                $.scrollTo('#an_advisory', 700);
+            });
+            $('#hw_r_p').click(function (){
+                $.scrollTo('#related_products', 700);
+            });
+            $('#hw_v_i').click(function (){
+                $.scrollTo('#view_interact', 700);
+            });
+            //当页面滚动到一定高度的时候导航菜单悬浮
+            $(window).scroll(function(){
+                var Height=$(window).scrollTop();
+                if(Height >=310){
+                   $('.o_d_model_02').addClass('position');
+                }else{
+                   $('.o_d_model_02').removeClass('position');
+                }
+            });
+            //照片人物遮罩
+
+        });
+    </script>
+<% end %>
+
+<!-- body 内容部分的layout -->
+<%= content_for :content do %>
+     <div id="o_detail_content">
+     	<div class="o_d_model_01">
+     		<div class="hw w_1100_center">
+     			<div class="hw_left">
+     				<div class="hw_pic">
+     				</div>
+     				<div class="hw_text">
+     					<p class="hw_p1">
+     						<span class="span01">嘉实财富北京大望路工作室</span>
+     						<span class="hw_icon span02"></span>
+     						<a href="javascript:void(0)"><span class="hw_icon span03"></span></a>
+     						<br />
+     						远见者稳进
+     					</p>
+     					<p class="hw_p2">
+     						<span>88@jsfund.cn</span>
+     						<span class="phone_num">010-65215588</span>
+     						<br/>
+     						北京市朝阳区建国路91号金地中心A座6层
+     					</p>
+     				</div>
+     				<div class="clear"></div>
+     			</div>
+     			<div class="hw_right">
+     				<a href="javascript:void(0)" class="concern" id="contact_me">关注</a>
+     			</div>
+     			<div class="clear"></div>
+     		</div>
+     	</div>
+     	<div class="o_d_model_02">
+     		<div class="hw_list w_1100_center">
+     			<ul class="navigation">
+                    <div class="orange_item" style="*position:absolute;*left:0;*bottom:-65px;"></div>
+     				<li class="hw_item">
+     					<a href="#" id="hw_o_d" class="child_item orange">工作室详情</a>
+     				</li>
+     				<li class="hw_item">
+     					<a href="#" id="hw_a_a" class="child_item">旗下顾问(<span>22</span>)</a>
+     				</li>
+     				<li class="hw_item">
+     					<a href="#" id="hw_r_p" class="child_item">关联产品</a>
+     				</li>
+     				<li class="hw_item">
+     					<a href="#" id="hw_v_i" class="child_item">观点互动</a>
+     				</li>
+     				<div class="clear"></div>
+     			</ul>
+     		</div>
+     	</div>
+     	<div class="o_d_model_03">
+            <div class="hw_introduce w_1100">
+     		    <div id="office_introduce">
+                    <div class="part_01">
+                        <p class="title_01">工作室介绍</p>
+                        <p class="t_p1">嘉实财富管理有限公司成立于2012年3月，由嘉实基金管理有限公司投资组建，是国内首家基金公司创建的财富管理机构。</p>
+                        <p class="t_p2">嘉实财富管理有限公司的长期战略目标，是顺应中国财富总量高速增长、经济结构和经济布局战略性调整嘉实财富管理有限公司的长期战略目标，是顺应中国财富总量高速增长、经济结构和经济布局战略性调整</p>
+                        <p class="t_03">其股东嘉实基金拥有证券投资基金设立与管理、全国社保基金投资管理人、企业年金投资管理人、基金公司开展境外证券投资管理业务和基金管理公司特定客户资产管理业务资格。截止2013年6月30日，资产管理金额达3000亿元，其中公募基金资产规模为1704亿元，居行业第二。</p>
+                    </div>
+                    <div class="part_02">
+                        <p class="title_01">服务介绍</p>
+                        <p class="t_p1">
+                            嘉实财富北京大望路工作室拥有22名专业的投资顾问，每年管理资产超过十亿元。目前提供的服务包括私募股权投资，公募基金投资，基金专户投资，家族信托等资产管理业务。同时，嘉实服务于全社会的基础社会保障———全国社保基金和地方社保基金；也为包括企业年金和商业保险在内的补充性社会保障提供直接或间接的服务；还为企业提供公募基金的理财服务，以及定制个性化的特定客户投资管理服务(含高端个人客户)，使他们的资产保值，增值；通过共同基金管理与投资，我们帮助更多的人群启动事业梦想，供养子女读书深造，享受恬静、富足的晚年生活。
+                        </p>
+                    </div>
+                    <div class="part_03">
+                        <p class="title_01">相关视频</p>
+                        <p class="t_p1">
+                            <embed style="border:1px solid black;width:300px;height:230px;display:block;" src="http://www.player.com/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash"></embed>
+                        </p>
+                    </div>
+                </div>
+                <div id="an_advisory">
+                    <p class="title_01" style="padding-left:32px;">旗下顾问</p>
+                    <div id="contact" class="w_1100_center">
+                        <ul class="contact_item">
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                        <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                        <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                        <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                      <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                      <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                      <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                      <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                    <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                    <div class="mask">
+                                        <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                    </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                      <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                      <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                  <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                  <div class="mask">
+                                      <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                  </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person_picture">
+                                    <img src="/hwm_studios/images/renwu/a-1.jpg" alt="" />
+                                    <div class="mask">
+                                        <p style="padding:20px;">人物简介:张国津，毕业于bhjkkknknknkm lkkkmmmlkl</p>
+                                    </div>
+                                </div>
+                                <div class="person_name">
+                                    <span class="adder_name">北京</span>
+                                    <span class="p_name">张国津</span>
+                                </div>
+                                <div class="person_describe">
+                                    <span class="de_tit">PE/VC</span>
+                                    <span class="de_tit">私募股权</span>
+                                    <span id="title_three" class="de_tit">一级市场</span>
+                                    <div class="clear"></div>
+                                </div>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                        <div class="down_look_all">
+                            <div class="look_all">
+                            <a href="javascript:void(0);">查看所有</a>
+                            <span class="down_pic"></span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div id="related_products">
+                    <p class="title_01">关联产品</p>
+                    <div id="product_name">
+                        <table id="table_01" width="1034" height="70" border="0" cellspacing="0" cellpadding="0">
+                            <tr style="background:#e7e7e7;">
+                                <td width="129" align="center">产品名称</td>
+                                <td width="129" align="center">管理公司</td>
+                                <td width="129" align="center">产品类型</td>
+                                <td width="129" align="center">股权私募</td>
+                                <td width="129" align="center">24个月</td>
+                                <td width="129" align="center">募集起始日</td>
+                                <td width="129" align="center">募集结束日</td>
+                                <td align="center">状态</td>
+                            </tr>
+                        </table>
+                        <table id="table_02" width="1034" border="0" cellspacing="0" cellpadding="0">
+                            <tr height="70">
+                                <td width="129" align="center"><a href="javascript:void(0)">嘉实北星太阳</a></td>
+                                <td width="129" align="center">嘉实北星</td>
+                                <td width="129" align="center">股权私募</td>
+                                <td width="129" align="center">24个月</td>
+                                <td width="129" align="center">100万</td>
+                                <td width="129" align="center">20150101</td>
+                                <td width="129" align="center">20150130</td>
+                                <td align="center" style="border-right:1px solid #e7e7e7;">募集期</td>
+                            </tr>
+                            <tr height="70">
+                                <td width="129" align="center"><a href="javascript:void(0)">产品名称</a></td>
+                                <td width="129" align="center">嘉实北星</td>
+                                <td width="129" align="center">股权私募</td>
+                                <td width="129" align="center">24个月</td>
+                                <td width="129" align="center">100万</td>
+                                <td width="129" align="center">20150101</td>
+                                <td width="129" align="center">20150130</td>
+                                <td align="center" style="border-right:1px solid #e7e7e7;">募集期</td>
+                            </tr>
+                            <tr height="70">
+                                <td width="129" align="center"><a href="javascript:void(0)">产品名称</a></td>
+                                <td width="129" align="center">嘉实北星</td>
+                                <td width="129" align="center">股权私募</td>
+                                <td width="129" align="center">24个月</td>
+                                <td width="129" align="center">100万</td>
+                                <td width="129" align="center">20150101</td>
+                                <td width="129" align="center">20150130</td>
+                                <td align="center" style="border-right:1px solid #e7e7e7;">募集期</td>
+                            </tr>
+                            <tr height="70">
+                                <td width="102" align="center"><a href="javascript:void(0)">产品名称</a></td>
+                                <td width="129" align="center">嘉实北星</td>
+                                <td width="129" align="center">股权私募</td>
+                                <td width="129" align="center">24个月</td>
+                                <td width="129" align="center">100万</td>
+                                <td width="129" align="center">20150101</td>
+                                <td width="129" align="center">20150130</td>
+                                <td align="center" style="border-right:1px solid #e7e7e7;">募集期</td>
+                            </tr>
+                            <tr height="70">
+                                <td width="129" align="center"><a href="javascript:void(0)">产品名称</a></td>
+                                <td width="129" align="center">嘉实北星</td>
+                                <td width="129" align="center">股权私募</td>
+                                <td width="129" align="center">24个月</td>
+                                <td width="129" align="center">100万</td>
+                                <td width="129" align="center">20150101</td>
+                                <td width="129" align="center">20150130</td>
+                                <td align="center" style="border-right:1px solid #e7e7e7;">募集期</td>
+                            </tr>
+                            <tr height="70">
+                                <td width="129" align="center"><a href="javascript:void(0)">产品名称</a></td>
+                                <td width="129" align="center">嘉实北星</td>
+                                <td width="129" align="center">股权私募</td>
+                                <td width="129" align="center">24个月</td>
+                                <td width="129" align="center">100万</td>
+                                <td width="129" align="center">20150101</td>
+                                <td width="129" align="center">20150130</td>
+                                <td align="center" style="border-right:1px solid #e7e7e7;">募集期</td>
+                            </tr>
+                            <tr height="70">
+                                <td width="129" align="center" style="border-bottom:1px solid #e7e7e7;"><a href="javascript:void(0)">产品名称</a></td>
+                                <td width="129" align="center" style="border-bottom:1px solid #e7e7e7;">嘉实北星</td>
+                                <td width="129" align="center" style="border-bottom:1px solid #e7e7e7;">股权私募</td>
+                                <td width="129" align="center" style="border-bottom:1px solid #e7e7e7;">24个月</td>
+                                <td width="129" align="center" style="border-bottom:1px solid #e7e7e7;">100万</td>
+                                <td width="129" align="center" style="border-bottom:1px solid #e7e7e7;">24个月</td>
+                                <td width="129" align="center" style="border-bottom:1px solid #e7e7e7;">100万</td>
+                                <td align="center" style="border-right:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;">募集期</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="view_interact">
+                    <div class="download_data">
+                        <a href="javascript:void(0);">客户评价/</a>
+                        <a href="javascript:void(0);">观点互动/</a>
+                        <a href="javascript:void(0);">资料下载/</a>
+                        <br />
+                        <p class="first_s">第一期略</p>
+                    </div>
+                </div>
+            </div>
+     	</div>
+     </div>
+<% end %>

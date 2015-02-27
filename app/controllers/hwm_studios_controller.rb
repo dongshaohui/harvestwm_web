@@ -14,7 +14,9 @@ class HwmStudiosController < ApplicationController
   # GET /hwm_studios/1.json
   def show
     @hwm_studio = HwmStudio.find(params[:id])
-
+    @user_account_list = @hwm_studio.hwm_user_accounts ## 工作室关联的投资顾问列表
+    @product_list = 
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @hwm_studio }

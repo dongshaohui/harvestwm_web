@@ -47,8 +47,6 @@ class HwmStudio < ActiveRecord::Base
   validates_presence_of :verify_state, :message => "审核状态不能为空"
   validates_inclusion_of :verify_state, :in => [0,1,2,3], :message => "审核状态类型错误!"  
   
-  
-  
   has_many :hwm_studio_hwm_resource_links # 与关联表关联关系
   has_many :hwm_resource_links, :through => :hwm_studio_hwm_resource_links # 与外部资源链接关联关系
   
@@ -56,6 +54,10 @@ class HwmStudio < ActiveRecord::Base
   has_many :hwm_resource_pics, :through => :hwm_studio_hwm_resource_pics # 与图片关联关系
   
   ## 与用户进行关联
-  has_many :hwm_user_accounts 
+  has_many :hwm_user_accounts   # 所属投资顾问关联
+  
+  ## 与产品进行关联
+  has_many :hwm_products  # 所属产品关联
+  
   
 end

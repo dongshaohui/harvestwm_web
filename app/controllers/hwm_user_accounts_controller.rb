@@ -10,11 +10,13 @@ class HwmUserAccountsController < ApplicationController
     @addr = params[:addr].to_s # 获取城市
     @tag = params[:tag].to_s # 标签
     @name = params[:name].to_s # 顾客姓名 
+    @js_tag = params[:js_tag].to_i # 是否为嘉实投资顾问的标志    
+    
     
     # 提交给view的参数，包含城市列表、标签列表、投顾信息列表
     @citylist = fetch_city_list_of_consultant   # 获取投顾所在城市列表
     @taglist = fetch_tag_list_of_consultant # 获取投顾标签列表
-    @hwm_consultant_info_list = fetch_consultant_detail_info_list @pagenum == 0 ? 1:@pagenum , @addr, @tag, @name
+    @hwm_consultant_info_list = fetch_consultant_detail_info_list @pagenum == 0 ? 1:@pagenum , @addr, @tag, @name, @js_tag
     
     # 分别渲染不同视图
     if @user_type == 1  
@@ -192,7 +194,7 @@ class HwmUserAccountsController < ApplicationController
   end
   
   # 获取投资顾问详情信息
-  def fetch_consultant_detail_info_list(pagenum,addr,tag,name)
+  def fetch_consultant_detail_info_list(pagenum,addr,tag,name,js_tag)
     # 参数标准化
     addr = addr == "" ? nil:addr
     tag = tag == "" ? nil:tag
@@ -204,7 +206,7 @@ class HwmUserAccountsController < ApplicationController
     page_end = pagenum * dis_unit - 1  
     @hwm_consultant_info_list = []
     # 获取投资顾问列表
-    @hwm_user_accounts = HwmUserAccount.where(["hwm_user_account_role_id > ?",0])[page_front..page_end]
+    @hwm_user_accounts = HwmUserAccount.where(["hwm_user_account_role_id > ? and js_tag = ?",0,js_tag])[page_front..page_end]
     
     if @hwm_user_accounts != nil
       @hwm_user_accounts.each do |hwm_user_account|
@@ -251,17 +253,23 @@ class HwmUserAccountsController < ApplicationController
       @userinfo = userinfo
       @advanceinfo = advanceinfo
       @taglist = taglist
+      ## taglist最多只能有4个标签
+      if @taglist.size > 4
+        @taglist = @taglist[0..3] ## 取前四个标签进行展现
+      end
     end
     
-    ## get方法
+    ## userinfo get方法
     def userinfo
       @userinfo
     end
     
+    ## advanceinfo get方法
     def advanceinfo
       @advanceinfo
     end
     
+    ## taglist get方法
     def taglist
       @taglist
     end

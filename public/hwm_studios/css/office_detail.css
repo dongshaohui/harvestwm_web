@@ -1,0 +1,62 @@
+/*第一个模块*/
+.o_d_model_01{height:200px;font-family:"微软雅黑";width:100%;background:#232428;color:#fff;}
+.o_d_model_01 .hw{padding:30px;position:relative;}
+.o_d_model_01 .hw .hw_left{width:60%;float:left;}
+.hw_left .hw_pic{width:140px;height:140px;float:left;margin-right:50px;background:url(../images/icon.png) no-repeat 0px -256px;}
+.hw_left .hw_text{float:left;}
+.hw_p1{font-size:14px;margin-bottom:40px;line-height: 22px;}
+.hw_p1 .span01{font-size:20px;margin-right:10px;}
+.hw_p1 .hw_icon{display:inline-block;height:20px;x}
+.hw_p1 .span02{width:68px;background:url(../images/icon.png) no-repeat 0px -404px;}
+.hw_p1 .span03{width:40px;background:url(../images/icon.png) no-repeat 0px -430px;}
+.o_d_model_01 .hw .hw_right{float:left;height:44px;}
+.hw_right .concern{color:#fff;text-align:center;line-height:44px;display:block;position:absolute;right:30px;top:50%;width:136px;height:44px;margin-top:-22px;background:#ff8239;}
+.hw_p2{font-size:12px;line-height: 22px;}
+.phone_num{margin-left:58px;} 
+/*第二个模块*/
+.o_d_model_02{width:100%;height:65px;background:#fff;border-bottom:1px solid #d6d6d6;}
+.o_d_model_02.position{position:fixed;top:0;z-index:999;}
+.o_d_model_02 .hw_list li{width:180px;text-align:center;float:left;line-height:65px;} 
+.navigation{position:relative;display:block;margin-left:190px;}
+.hw_item .child_item{display:block;font-family:"微软雅黑";color:#666;}
+.orange_item{position:absolute;bottom:0;width:180px;height:4px;background:#ff8239;}
+.orange_item.orange{color:#ff8239;}
+/**/
+/*主体内容 照片*/
+.contact_item {padding-top:10px;padding-left: 32px;}
+.contact_item li{float:left;margin-right: 40px;width:229px;margin-bottom: 30px;}
+.contact_item li .person_picture{position:relative;height:160px;overflow:hidden;box-shadow: 3px 3px 5px #999;}
+.person_name{padding:5px 0px;}
+.person_name .p_name{width:60px;font-family:arial;}
+.person_name .adder_name{font-size:12px;float:right;}
+.person_describe span.de_tit{margin-right:18px;padding:5px 10px;font-size:12px;background:#f2f2f2;display:block;float:left;}
+#title_three{margin-right:0px;}
+/*照片遮罩*/
+.mask{display:none;position:absolute;left:0;top:0;width:229px;height:160px;background:#333;opacity: 0.5;filter:alpha(opacity=50);color:#fff;font-size:12px;}
+.mask.show{display:block;}
+/*主体内容 照片*/
+.down_look_all{text-align: center;}
+.look_all .down_pic{display:block;margin:0 auto;width:20px;height:12px;background:url(../images/icon.png) no-repeat -96px -28px;}
+
+/*产品关联table开始*/
+#product_name{padding: 15px 0px;}
+#table_02 td{border:1px solid #e7e7e7;border-right:none;border-bottom: none;}
+/* #table_02 td a{color:#ff8328;text-decoration: underline;} */
+#table_02{font-size: 12px;font-family: "微软雅黑";color:#7a7a7a;}
+#table_01{font-weight:600;color:#7a7a7a;}
+/*产品关联table结束*/
+
+/*第三个模块开始*/
+#office_introduce{padding:60px 32px 0px 32px;}
+#related_products{padding:60px 32px 0px 32px;}
+#view_interact{padding:60px 32px 0px 32px;}
+#an_advisory{padding:60px 0px 0px 0px;}
+.title_01{margin-bottom: 28px;margin-top: 20px;font-size:20px;}
+.part_01 p{margin-bottom: 40px;}
+.hw_introduce{font-family:"微软雅黑";font-size:14px;color:#666;} 
+.hw_introduce a{color:#666;}
+/* #pro_name_bgcolor{color:#666;} */
+.download_data a{font-size:20px;}
+.first_s{padding:20px 0px;}
+/*第三个模块结束*/
+
