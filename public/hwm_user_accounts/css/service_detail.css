@@ -1,17 +1,18 @@
 /*关注|预约*/
 #model_001{width:100%;background:#232428;height:100px;}
 #model_001 .m_content{position:relative;}
-.intro_pic{height:100px;width:84px;margin-right:10px;float:left;margin-left:90px;background:url(../images/icon.png) no-repeat 0px 0px;}
+.intro_pic{height:100px;width:84px;margin-right:10px;float:left;margin-left:90px;background:url(/hwm_user_accounts/images/icon.png) no-repeat 0px 0px;}
 .intro_detail_model001{color:#ccccad;padding-top:20px;}
 .intro_detail h3{margin-bottom:5px;}
 .intro_detail_model001 p{font-size: 12px;margin-bottom: 5px;}
 .div_right{position:absolute;right:0;top:50%;}
-.div_right span{padding:7px 35px;background:#ff8328;color:#fff;margin-left:10px;}
+.div_right span{padding:7px 35px;*padding:7px 35px;background:#ff8328;color:#fff;margin-left:10px;}
 .div_right a{color:#fff;}
 
 /*图片内容|文字*/
+#model_002{background: #e7e7e7;}
 #model_002 .m_002_l{width:120px;float:left;}
-#model_002 .m_002_l span{display:block;text-align:center;padding:10px 0px;}
+#model_002 .m_002_l span{display:block;text-align:center;}
 #model_002 .m_002_r{float:left;width:920px;background:#fff;padding:0px 30px 120px 30px;}
 
 #ban_pic{width:910px;overflow: hidden;margin-bottom:20px;}
@@ -33,7 +34,7 @@
 .b_f .f1{margin-left: 30px;}
 .b_f .f2{margin-left: 25px;}
 .b_f .gray_div{padding:5px 15px;background:#cccccc;color:#fff;}
-i.bm_pic{background:url(../images/icon.png) no-repeat -140px 0px;width:40px;height:33px;display:block;float:left;}
+i.bm_pic{background:url(/hwm_user_accounts/images/icon.png) no-repeat -140px 0px;width:40px;height:33px;display:block;float:left;}
 #next_page{text-align: right;font-size:14px;}
 #next_page a{color:#1a1a1a;}
 
@@ -44,3 +45,21 @@ i.bm_pic{background:url(../images/icon.png) no-repeat -140px 0px;width:40px;heig
 #table_02 td a{color:#ff8328;text-decoration: underline;}
 #table_02{font-size: 12px;font-family: "微软雅黑";color:#7a7a7a;}
 #table_01{font-weight:600;color:#7a7a7a;}
+/*小图标*/
+.or_div{padding:10px 33px;color:#6b6b6b;position:relative;}
+/* .or_div:hover{background:#ff8328;color:#fff;}
+.or_div:hover .pic_01{background: url(/hwm_user_accounts/images/icon.png) no-repeat -182px 5px;}
+.or_div:hover .pic_02{background: url(/hwm_user_accounts/images/icon.png) no-repeat -95px -45px;}
+.or_div:hover .pic_03{background: url(/hwm_user_accounts/images/icon.png) no-repeat -180px -101px;}
+.or_div:hover .lit_p{display:block;} */
+.or_div .icon_picture{width:54px;height:56px;margin-bottom:3px;display:block;} 
+.or_div .pic_01{background: url(/hwm_user_accounts/images/icon.png) no-repeat -237px 2px;}
+.or_div .pic_02{background: url(/hwm_user_accounts/images/icon.png) no-repeat -151px -45px;}
+.or_div .pic_03{background: url(/hwm_user_accounts/images/icon.png) no-repeat -237px -101px;}
+.or_div .lit_p{position:absolute;top:50%;margin-top:-8px;right:0;display:none;width:12px;height:14px;background:url(/hwm_user_accounts/images/icon.png) no-repeat -288px 0px;}
+.or_div.bgcolor{background:#ff8328;color:#fff;}
+.or_div .lit_p.appear{display:block;}
+.or_div .pic_01.bg_01{background: url(/hwm_user_accounts/images/icon.png) no-repeat -182px 5px;} 
+.or_div .pic_02.bg_02{background: url(/hwm_user_accounts/images/icon.png) no-repeat -95px -45px;}
+.or_div .pic_03.bg_03{background: url(/hwm_user_accounts/images/icon.png) no-repeat -180px -101px;}
+

@@ -1,0 +1,260 @@
+<!-- css 部分的layout -->
+<%= content_for :csspart do %>
+  <link href="/common/css/common.css" type="text/css" rel="stylesheet">
+  <link href="/hwm_user_accounts/css/service_detail.css" type="text/css" rel="stylesheet">
+<% end %>
+
+<!-- javascript 部分的layout -->
+<%= content_for :jspart do %> 
+	<script type="text/javascript" src="/common/js/jquery-1.2.6.pack.js"></script>
+	<script type="text/javascript">
+	   $(document).ready(function(){
+           $('#contact_me').click(function(){
+                $('#contact_me span').css({'background':'#ebebeb','color':'#333'})
+           });
+           $('.or_div').each(function (index){
+                $(this).click(function(){
+                    var mun=$('.or_div').eq(index);
+                    var litter=$('.lit_p').eq(index);
+                    var bg=$('.icon_picture').eq(index);
+                    $('.or_div').removeClass('bgcolor');
+                    mun.addClass('bgcolor');
+                    $('.lit_p').removeClass('appear');
+                    litter.addClass('appear');
+                });
+                $('.pic_01').addClass('bg_01');
+                $('.or_div').eq(0).click(function(){
+                     $('.pic_01').addClass('bg_01');
+                     $('.pic_02').removeClass('bg_02');
+                     $('.pic_03').removeClass('bg_03');
+                });
+                $('.or_div').eq(1).click(function(){
+                     $('.pic_02').addClass('bg_02');
+                     $('.pic_01').removeClass('bg_01');
+                     $('.pic_03').removeClass('bg_03');
+                });
+                $('.or_div').eq(2).click(function(){
+                     $('.pic_03').addClass('bg_03');
+                     $('.pic_02').removeClass('bg_02');
+                     $('.pic_01').removeClass('bg_01');
+                });
+           });
+	   });
+	</script>
+<% end %>
+
+<!-- body 内容部分的layout -->
+<%= content_for :content do %>
+    <div id="model_001">
+    	<div class="m_content w_1100_center">
+    		<div class="div_left">
+    			<div class="intro_pic"></div>
+    			<div class="intro_detail_model001">
+    				<h3>吴秀波<i></i></h2>
+    				<p>北京财富工作室&nbsp;|&nbsp; Tel:1356789956&nbsp;&nbsp;微信：WLS323233</p>
+    				<p>擅长领域：投资策略&nbsp;&nbsp;移民投资</p>
+    			</div>
+    		</div>
+    		<div class="div_right">
+    			<a id="contact_me" href="javascript:void(0)"><span>关注</span></a>
+    			<a href="javascript:void(0)"><span>预约</span></a>
+    		</div>
+    	</div>
+    </div>
+    <div id="model_002" class="w_1100_center">
+    	<div class="m_002_l">
+    		<a href="#ban_pic">
+	    		<span class="or_div bgcolor">
+	    			<span class="icon_picture pic_01"></span>
+	    			<i class="lit_p appear"></i>
+	    			简介
+	    		</span>
+    		</a>
+    		<a href="#area02">
+    			<span class="or_div">
+	    			<span class="icon_picture pic_02"></span>
+	    			<i class="lit_p"></i>
+	    			观点
+    		    </span>
+    		</a>
+    		<a href="#area03">
+    			<span class="or_div">
+	    			<span class="icon_picture pic_03"></span>
+	    			<i class="lit_p"></i>
+	    			推荐
+    		    </span>
+    		</a>
+    	</div>
+
+    	<div class="m_002_r">
+    		<div id="ban_pic">
+    			<img src="/hwm_user_accounts/images/detail_01.png" alt="" />
+    		</div>
+    		<div class="area01">
+    			<p class="nr_p c_p1">
+	    			<span class="color_t">自我介绍</span>
+	                张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源
+    		    </p>
+	    		<p class="nr_p c_p2">
+	    			<span class="color_t">工作经历</span>
+	                张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源
+	    		</p>
+	    		<p class="nr_p c_p3">
+	    			<span class="color_t">教育背景</span>
+	                张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源张国津博士就职于罗盛咨询中国公司，负责传统能源、情节能源
+	    		</p>
+    		</div>
+    		<div class="area02" id="area02">
+    			<div id="new_idea">
+    			    <h2>最新观点</h2>
+    			    <div class="n_div"></div>
+    		    </div>
+	    		<div id="new_idea_list">
+	    			<div class="new_item fore1">
+						<div class="new_fl f_left">
+							<img src="/hwm_user_accounts/images/detail_02.png" alt="" />
+						</div>
+						<div class="new_fr f_left">
+							<div class="ne_title">投资市场最新行情探讨<a href="javascript:void(0)"><span class="del">删除</span></a></div>
+							<p class="intro_detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务能力和竞争力稳居龙头地位。中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平</p>
+							<div class="new_fr_bott">
+								<i class="bm_pic"></i>
+								<span class="b_f">
+									祁世超 
+									<span class="gray_div f1">基金</span>
+									<span class="gray_div f2">房贷</span>
+								</span>
+								<!-- <span class="b_r"><i>320</i>人已看<i>12-8</i></span> -->
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="clear"></div>
+	    			</div>
+	    			<div class="new_item fore1">
+						<div class="new_fl f_left">
+							<img src="/hwm_user_accounts/images/detail_02.png" alt="" />
+						</div>
+						<div class="new_fr f_left">
+							<div class="ne_title">投资市场最新行情探讨<a href="javascript:void(0)"><span class="del">删除</span></a></div>
+							<p class="intro_detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务能力和竞争力稳居龙头地位。中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平</p>
+							<div class="new_fr_bott">
+								<i class="bm_pic"></i>
+								<span class="b_f">
+									祁世超 
+									<span class="gray_div f1">基金</span>
+									<span class="gray_div f2">房贷</span>
+								</span>
+								<!-- <span class="b_r"><i>320</i>人已看<i>12-8</i></span> -->
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="clear"></div>
+	    			</div>
+	    			<div class="new_item fore1">
+						<div class="new_fl f_left">
+							<img src="/hwm_user_accounts/images/detail_02.png" alt="" />
+						</div>
+						<div class="new_fr f_left">
+							<div class="ne_title">投资市场最新行情探讨<a href="javascript:void(0)"><span class="del">删除</span></a></div>
+							<p class="intro_detail">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务能力和竞争力稳居龙头地位。中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平中信的传统和创新业务都居行业领先水平</p>
+							<div class="new_fr_bott">
+								<i class="bm_pic"></i>
+								<span class="b_f">
+									祁世超 
+									<span class="gray_div f1">基金</span>
+									<span class="gray_div f2">房贷</span>
+								</span>
+								<!-- <span class="b_r"><i>320</i>人已看<i>12-8</i></span> -->
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="clear"></div>
+	    			</div>
+	    		</div>
+	    		<div id="next_page">
+	    			<a class="" href="javascript:void(0)">1</a>&nbsp;
+	    			<a class="" href="javascript:void(0)">2</a>&nbsp;
+	    			<a class="" href="javascript:void(0)">&gt;</a>
+	    		</div>
+	    	</div>
+	    	<div class="area03" id="area03">
+    			<div id="new_idea">
+    			    <h2>产品推荐</h2>
+    			    <div class="n_div"></div>
+    		    </div>
+	    		<div id="product_name">
+	    			<table id="table_01" width="920" height="70" border="0" cellspacing="0" cellpadding="0">
+	    				<tr style="background:#e7e7e7;">
+	    					<td width="102" align="center">产品名称</td>
+	    					<td width="102" align="center">投资领域</td>
+	    					<td width="102" align="center">产品期限</td>
+	    					<td width="102" align="center">起始资金</td>
+	    					<td width="102" align="center">预期收益</td>
+	    					<td align="center">推荐理由</td>
+	    				</tr>
+	    			</table>
+	    			<table id="table_02" width="920" border="0" cellspacing="0" cellpadding="0">
+	    				<tr height="70">
+	    					<td width="102" align="center"><a href="javascript:void(0)">嘉实北星太阳</a></td>
+	    					<td width="102" align="center">投资领域</td>
+	    					<td width="102" align="center">产品期限</td>
+	    					<td width="102" align="center">起始资金</td>
+	    					<td width="102" align="center">预期收益</td>
+	    					<td align="center" style="border-right:1px solid #e7e7e7;">推荐理由</td>
+	    				</tr>
+	    				<tr height="70">
+	    					<td width="102" align="center"><a href="javascript:void(0)">产品名称</a></td>
+	    					<td width="102" align="center">投资领域</td>
+	    					<td width="102" align="center">产品期限</td>
+	    					<td width="102" align="center">起始资金</td>
+	    					<td width="102" align="center">预期收益</td>
+	    					<td align="center" style="border-right:1px solid #e7e7e7;">推荐理由</td>
+	    				</tr>
+                        <tr height="70">
+	    					<td width="102" align="center"><a href="javascript:void(0)">产品名称</a></td>
+	    					<td width="102" align="center">投资领域</td>
+	    					<td width="102" align="center">产品期限</td>
+	    					<td width="102" align="center">起始资金</td>
+	    					<td width="102" align="center">预期收益</td>
+	    					<td align="center" style="border-right:1px solid #e7e7e7;">推荐理由</td>
+	    				</tr>
+	    				<tr height="70">
+	    					<td width="102" align="center"><a href="javascript:void(0)">产品名称</a></td>
+	    					<td width="102" align="center">投资领域</td>
+	    					<td width="102" align="center">产品期限</td>
+	    					<td width="102" align="center">起始资金</td>
+	    					<td width="102" align="center">预期收益</td>
+	    					<td align="center" style="border-right:1px solid #e7e7e7;">推荐理由</td>
+	    				</tr>
+	    				<tr height="70">
+	    					<td width="102" align="center"><a href="javascript:void(0)">产品名称</a></td>
+	    					<td width="102" align="center">投资领域</td>
+	    					<td width="102" align="center">产品期限</td>
+	    					<td width="102" align="center">起始资金</td>
+	    					<td width="102" align="center">预期收益</td>
+	    					<td align="center" style="border-right:1px solid #e7e7e7;">推荐理由</td>
+	    				</tr>
+	    				<tr height="70">
+	    					<td width="102" align="center"><a href="javascript:void(0)">产品名称</a></td>
+	    					<td width="102" align="center">投资领域</td>
+	    					<td width="102" align="center">产品期限</td>
+	    					<td width="102" align="center">起始资金</td>
+	    					<td width="102" align="center">预期收益</td>
+	    					<td align="center" style="border-right:1px solid #e7e7e7;">推荐理由</td>
+	    				</tr>
+	    				<tr height="70">
+	    					<td width="102" align="center" style="border-bottom:1px solid #e7e7e7;"><a href="javascript:void(0)">产品名称</a></td>
+	    					<td width="102" align="center" style="border-bottom:1px solid #e7e7e7;">投资领域</td>
+	    					<td width="102" align="center" style="border-bottom:1px solid #e7e7e7;">产品期限</td>
+	    					<td width="102" align="center" style="border-bottom:1px solid #e7e7e7;">起始资金</td>
+	    					<td width="102" align="center" style="border-bottom:1px solid #e7e7e7;">预期收益</td>
+	    					<td align="center" style="border-right:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;">推荐理由</td>
+	    				</tr>
+	    			</table>
+	    		</div>
+	    	</div>	
+    	</div> 
+    	<div class="clear"></div>
+
+    </div>
+<% end %>

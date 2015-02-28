@@ -5,10 +5,11 @@
   <% stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
   <meta charset="UTF-8">
-  <link href="/hwm_user_accounts/css/common.css" type="text/css" rel="stylesheet">
-  <link href="/hwm_user_accounts/css/service.css" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="/hwm_user_accounts/js/common.js"></script>
-  <script type="text/javascript" src="/hwm_user_accounts/js/service.js"></script> 
+  <!--  资源部分  -->
+  <%= yield :csspart %>
+  <%= yield :jspart %>
+  <!-- 资源部分end -->
+ 
   <title><%= yield(:title) || 'HarvestwmWeb' %></title>
 </head>
 <body>
@@ -38,7 +39,7 @@
     </div>
   </div>
 
-<%= yield %>
+<%= yield :content %>
 
   <div id="footer">
     <div class="footer_list">

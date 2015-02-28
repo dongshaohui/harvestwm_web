@@ -16,7 +16,7 @@ class HwmStudiosController < ApplicationController
     studio_number_per_page = 3 # 每页的工作室数目  
     @citylist = fetch_city_list_of_studio ## 获取工作室所在城市列表
     @total_page_num = fetch_total_page_number studio_number_per_page ## 获取pagenum总数
-    @hwm_studios =  fetch_compatible_studio_list addr,js_tag # 按照筛选条件获取工作室列表
+    @hwm_studios =  fetch_compatible_studio_list @addr,@js_tag # 按照筛选条件获取工作室列表
     @hwm_studios = fetch_studio_list @hwm_studios,@pagenum,studio_number_per_page ## 根据分页获取展示的工作室列表
     
     respond_to do |format|

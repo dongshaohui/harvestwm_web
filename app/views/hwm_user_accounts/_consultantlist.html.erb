@@ -1,5 +1,18 @@
-  <div id="content">
+<!-- css 部分的layout -->
+<%= content_for :csspart do %>
+  <link href="/hwm_user_accounts/css/common.css" type="text/css" rel="stylesheet">
+  <link href="/hwm_user_accounts/css/service.css" type="text/css" rel="stylesheet">
+<% end %>
 
+<!-- javascript 部分的layout -->
+<%= content_for :jspart do %> 
+  <script type="text/javascript" src="/hwm_user_accounts/js/common.js"></script>
+  <script type="text/javascript" src="/hwm_user_accounts/js/service.js"></script>
+<% end %>
+
+<!-- body 内容部分的layout -->
+<%= content_for :content do %>
+  <div id="content">
     <div id="content_list" class="w_1100">
       <div class="content_item">
         <p class="text_01">首页&gt;顾问&#124;工作室</p>
@@ -196,3 +209,7 @@
         </div>
     </div>
   </div>
+<% end %>
+  
+  
+  
